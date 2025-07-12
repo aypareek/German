@@ -103,6 +103,7 @@ with st.sidebar.expander("❓ Mini-FAQ / Hilfe", expanded=False):
       → Wähle ein Thema, mache das Quiz, lerne mit Flashcards.
     """)
 
+
 if "progress" not in st.session_state:
     st.session_state.progress = {t: {"quizzes": 0, "flashcards": 0} for t in topics}
 
@@ -125,6 +126,15 @@ st.sidebar.markdown(
     unsafe_allow_html=True
 )
 st.sidebar.markdown("<br>", unsafe_allow_html=True)
+
+st.sidebar.markdown(
+    """
+    <a href="https://www.paypal.com/paypalme/ayushpareek1990" target="_blank"
+       style="background:#ffd700;padding:9px 18px;border-radius:22px;color:#222;font-weight:600;text-decoration:none;">
+        ☕️ Buy me a coffee!
+    </a>
+    """, unsafe_allow_html=True
+)
 
 # -------------- TAB SELECTOR --------------
 tab_choice = st.radio(
