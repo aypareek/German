@@ -2,24 +2,23 @@ import streamlit as st
 import yaml
 import os
 
-# -------------- SETTINGS --------------
 st.set_page_config(page_title="Clear B1 Exam with Ayush", page_icon="🇩🇪", layout="centered")
 
-# ---------- THEME SWITCH & DARK MODE CSS ----------
+# --- Responsive & Dark Mode CSS ---
 theme = st.sidebar.radio("🌗 Farbschema wählen", ["Hell", "Dunkel"], horizontal=True)
 if theme == "Dunkel":
     st.markdown(
         """
         <style>
-        .main, .stApp, [data-testid="stAppViewContainer"], [data-testid="stVerticalBlock"], .stMarkdown, .markdown-text-container, .element-container, .stText, .stRadio label, .stRadio, .stSelectbox, p, span, div, h1, h2, h3, h4, h5, h6 {
-            color:#e4e4e4 !important;
+        body, .stApp, .main, [data-testid="stVerticalBlock"], .stMarkdown, .markdown-text-container, .element-container, .stText, .stRadio label, .stRadio, .stSelectbox, p, span, div, h1, h2, h3, h4, h5, h6 {
+            color: #e4e4e4 !important;
             background: #191c24 !important;
         }
-        .flashcard { background:#2a2d3a !important; color:#ffe !important; }
-        .quiz-block { background:#26284e !important; }
-        .scoretag { background:#112b11 !important; color:#9fe69f !important; }
-        .stButton>button { background:#18317e; color:#fff;}
-        .stButton>button:hover { background:#1957ba;}
+        .flashcard { background: #2a2d3a !important; color: #ffe !important; border-radius: 14px; }
+        .quiz-block { background: #26284e !important; color: #e4e4e4 !important; border-radius: 14px; }
+        .scoretag { background: #112b11 !important; color: #9fe69f !important; }
+        .stButton>button { background: #18317e; color: #fff; border-radius: 8px; font-size: 1.1em; }
+        .stButton>button:hover { background: #1957ba;}
         </style>
         """,
         unsafe_allow_html=True
@@ -28,34 +27,33 @@ else:
     st.markdown(
         """
         <style>
-        .main { background-color: #f7f8fb; }
-        .stButton>button { background: #1957ba; color: #fff; border-radius: 8px; padding:0.4em 1.4em; font-weight:600; }
-        .stButton>button:hover { background: #174a9e; }
-        .stRadio label { font-size:1.1em; }
-        .quiz-block { background:#e6eaff; border-radius:14px; padding:18px 24px; margin:1.2em 0 1.6em 0; border:1.5px solid #1957ba22; }
-        .flashcard { border-radius:16px; background:#fffbe8; border:2px solid #e6eaff; box-shadow:0 2px 12px #ccd1e822; margin:1.2em 0; padding:2.3em 1em; text-align:center; font-size:1.45em; }
-        .flash-controls { text-align:center; margin-top:0.6em;}
-        .cardnum { font-size:0.95em; color:#1957ba;}
-        .scoretag { background:#d0ffd0; color:#185a18; font-size:1.12em; padding:0.2em 1em; border-radius:12px; margin-right:0.8em;}
+        body, .stApp, .main, [data-testid="stVerticalBlock"] {
+            background: #f7f8fb !important; color: #222 !important;
+        }
+        .flashcard { background: #fffbe8 !important; color: #222 !important; border-radius: 14px; }
+        .quiz-block { background: #e6eaff !important; color: #222 !important; border-radius: 14px; }
+        .scoretag { background: #d0ffd0 !important; color: #185a18 !important; }
+        .stButton>button { background: #1957ba; color: #fff; border-radius: 8px; font-size: 1.1em; }
+        .stButton>button:hover { background: #174a9e;}
         </style>
         """,
         unsafe_allow_html=True
     )
 
-# Mobile-first tweaks
+# --- Mobile scaling + radio wrap ---
 st.markdown("""
 <style>
 @media (max-width: 700px) {
-    h1 { font-size: 2em !important; }
-    .flashcard, .quiz-block { padding: 1em 0.4em !important; font-size: 1.07em !important; }
+    .stRadio [role="radiogroup"] { flex-direction: column !important; }
     .stButton>button { font-size: 1em !important; }
-    .main, body { padding: 0 !important; }
-    .cardnum { font-size: 0.87em !important; }
+    h1, h2, h3 { font-size: 1.2em !important; }
+    .flashcard, .quiz-block { padding: 1em 0.6em !important; font-size: 1em !important; }
     .scoretag { font-size: 1em !important; }
 }
 </style>
 """, unsafe_allow_html=True)
 
+# --- App Branding ---
 st.markdown(
     """
     <div style="text-align:center; margin-bottom:1.2rem">
@@ -102,7 +100,6 @@ with st.sidebar.expander("❓ Mini-FAQ / Hilfe", expanded=False):
     - **Wie funktioniert die App?**  
       → Wähle ein Thema, mache das Quiz, lerne mit Flashcards.
     """)
-
 
 if "progress" not in st.session_state:
     st.session_state.progress = {t: {"quizzes": 0, "flashcards": 0} for t in topics}
@@ -180,8 +177,10 @@ if tab_choice == "Quiz":
                     st.progress(10)
                 if st.toggle("💡 Lösung/Erklärung anzeigen", key=exp_key, value=False):
                     st.markdown(f"**Erklärung:** {q.get('explanation','')}")
-            else:
-                st.write("&nbsp;")
+            # --- CONTEXTUAL GRAMMAR HELPER ---
+            if "grammar_hint" in q:
+                with st.expander("📖 Show me grammar for this sentence"):
+                    st.markdown(q["grammar_hint"])
             st.markdown('</div>', unsafe_allow_html=True)
         st.markdown(
             f"<div class='scoretag'>Quiz-Ergebnis: {num_correct}/{len(quizzes)} "
