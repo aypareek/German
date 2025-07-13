@@ -60,6 +60,34 @@ if not st.session_state.welcomed:
 
 # ---------- Sidebar ----------
 st.sidebar.markdown('<span style="color:#1957ba;font-size:1.2em;"><b>Navigation</b></span>', unsafe_allow_html=True)
+st.markdown(
+    """
+    <style>
+    div[data-testid="stSidebar"] button[kind="secondary"] {
+        background: linear-gradient(90deg,#e66465,#1957ba 80%);
+        color: #fff !important;
+        font-weight: bold;
+        font-size: 1.14em;
+        padding-top: 0.7em; padding-bottom: 0.7em;
+        border-radius: 22px;
+        margin-bottom: 1.3em;
+        margin-top: 1.2em;
+        border: none;
+        transition: background 0.18s, box-shadow 0.13s;
+        box-shadow: 0 1.5px 8px #1957ba22;
+    }
+    div[data-testid="stSidebar"] button[kind="secondary"]:hover {
+        background: linear-gradient(90deg,#1957ba,#e66465 80%);
+        color: #fff !important;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+if st.sidebar.button("🔄 Alles zurücksetzen", key="reset_button"):
+    for k in list(st.session_state.keys()):
+        del st.session_state[k]
+    st.rerun()
 # --- Profile/Settings: Name entry + personalized greeting ---
 with st.sidebar.expander("👤 Profil / Einstellungen"):
     user_name = st.text_input("Dein Name (optional):", value=st.session_state.get("user_name", ""))
