@@ -4,66 +4,37 @@ import os
 
 st.set_page_config(page_title="Clear B1 Exam with Ayush", page_icon="🇩🇪", layout="centered")
 
-# --- Responsive & Dark Mode CSS ---
-theme = st.sidebar.radio("🌗 Farbschema wählen", ["Hell", "Dunkel"], horizontal=True)
-if theme == "Dunkel":
-    st.markdown(
-        """
-        <style>
-        body, .stApp, .main, [data-testid="stVerticalBlock"], .stMarkdown, .markdown-text-container, .element-container, .stText, .stRadio label, .stRadio, .stSelectbox, p, span, div, h1, h2, h3, h4, h5, h6 {
-            color: #e4e4e4 !important;
-            background: #191c24 !important;
-        }
-        .flashcard { background: #2a2d3a !important; color: #ffe !important; border-radius: 14px; width:100% !important; max-width:650px; margin:auto; }
-        .quiz-block { background: #26284e !important; color: #e4e4e4 !important; border-radius: 14px; width:100% !important; max-width:650px; margin:auto; }
-        .scoretag { background: #112b11 !important; color: #9fe69f !important; }
-        .stButton>button { background: #18317e; color: #fff; border-radius: 8px; font-size: 1.09em; }
-        .stButton>button:hover { background: #1957ba;}
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
-else:
-    st.markdown(
-        """
-        <style>
-        body, .stApp, .main, [data-testid="stVerticalBlock"] {
-            background: #f7f8fb !important; color: #222 !important;
-        }
-        .flashcard { background: #fffbe8 !important; color: #222 !important; border-radius: 14px; width:100% !important; max-width:650px; margin:auto;}
-        .quiz-block { background: #e6eaff !important; color: #222 !important; border-radius: 14px; width:100% !important; max-width:650px; margin:auto;}
-        .scoretag { background: #d0ffd0 !important; color: #185a18 !important; }
-        .stButton>button { background: #1957ba; color: #fff; border-radius: 8px; font-size: 1.09em; }
-        .stButton>button:hover { background: #174a9e;}
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
+# --- Mobile/Tablet-optimized light mode only ---
+st.markdown(
+    """
+    <style>
+    body, .stApp, .main, [data-testid="stVerticalBlock"] {
+        background: #f7f8fb !important; color: #222 !important;
+    }
+    .flashcard { background: #fffbe8 !important; color: #222 !important; border-radius: 14px; width:100% !important; max-width:650px; margin:auto;}
+    .quiz-block { background: #e6eaff !important; color: #222 !important; border-radius: 14px; width:100% !important; max-width:650px; margin:auto;}
+    .scoretag { background: #d0ffd0 !important; color: #185a18 !important; }
+    .stButton>button { background: #1957ba; color: #fff; border-radius: 8px; font-size: 1.09em; }
+    .stButton>button:hover { background: #174a9e;}
+    body, .stApp { font-size: 1.05em !important; font-family: 'Segoe UI', 'Arial', sans-serif !important; }
+    @media (max-width: 1100px) {
+        .stRadio [role="radiogroup"] { flex-direction: column !important; }
+        .stButton>button { font-size: 1.07em !important; }
+        .flashcard, .quiz-block { padding: 1em 0.8em !important; font-size: 1.02em !important; }
+        .scoretag { font-size: 1em !important; }
+        h1, h2, h3 { font-size: 1.13em !important; }
+    }
+    @media (max-width: 700px) {
+        .stRadio [role="radiogroup"] { flex-direction: column !important; }
+        .stButton>button { font-size: 1em !important; }
+        .flashcard, .quiz-block { padding: 0.6em 0.3em !important; font-size: 0.97em !important; }
+        h1, h2, h3 { font-size: 1em !important; }
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
-# --- Mobile + Tablet scaling and radio stacking ---
-st.markdown("""
-<style>
-body, .stApp {
-    font-size: 1.05em !important;
-    font-family: 'Segoe UI', 'Arial', sans-serif !important;
-}
-@media (max-width: 1100px) {
-    .stRadio [role="radiogroup"] { flex-direction: column !important; }
-    .stButton>button { font-size: 1.07em !important; }
-    .flashcard, .quiz-block { padding: 1em 0.8em !important; font-size: 1.02em !important; }
-    .scoretag { font-size: 1em !important; }
-    h1, h2, h3 { font-size: 1.13em !important; }
-}
-@media (max-width: 700px) {
-    .stRadio [role="radiogroup"] { flex-direction: column !important; }
-    .stButton>button { font-size: 1em !important; }
-    .flashcard, .quiz-block { padding: 0.6em 0.3em !important; font-size: 0.97em !important; }
-    h1, h2, h3 { font-size: 1em !important; }
-}
-</style>
-""", unsafe_allow_html=True)
-
-# --- App Branding ---
 st.markdown(
     """
     <div style="text-align:center; margin-bottom:1.2rem">
@@ -110,7 +81,7 @@ with st.sidebar.expander("❓ Mini-FAQ / Hilfe", expanded=False):
     - **Wie funktioniert die App?**  
       → Wähle ein Thema, mache das Quiz, lerne mit Flashcards.
     """)
-# --- Optional: Buy me a coffee sidebar button ---
+# --- Buy me a coffee sidebar button ---
 st.sidebar.markdown(
     """
     <div style='text-align:center;margin-top:2em;'>
