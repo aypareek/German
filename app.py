@@ -14,10 +14,10 @@ if theme == "Dunkel":
             color: #e4e4e4 !important;
             background: #191c24 !important;
         }
-        .flashcard { background: #2a2d3a !important; color: #ffe !important; border-radius: 14px; }
-        .quiz-block { background: #26284e !important; color: #e4e4e4 !important; border-radius: 14px; }
+        .flashcard { background: #2a2d3a !important; color: #ffe !important; border-radius: 14px; width:100% !important; max-width:650px; margin:auto; }
+        .quiz-block { background: #26284e !important; color: #e4e4e4 !important; border-radius: 14px; width:100% !important; max-width:650px; margin:auto; }
         .scoretag { background: #112b11 !important; color: #9fe69f !important; }
-        .stButton>button { background: #18317e; color: #fff; border-radius: 8px; font-size: 1.1em; }
+        .stButton>button { background: #18317e; color: #fff; border-radius: 8px; font-size: 1.09em; }
         .stButton>button:hover { background: #1957ba;}
         </style>
         """,
@@ -30,25 +30,35 @@ else:
         body, .stApp, .main, [data-testid="stVerticalBlock"] {
             background: #f7f8fb !important; color: #222 !important;
         }
-        .flashcard { background: #fffbe8 !important; color: #222 !important; border-radius: 14px; }
-        .quiz-block { background: #e6eaff !important; color: #222 !important; border-radius: 14px; }
+        .flashcard { background: #fffbe8 !important; color: #222 !important; border-radius: 14px; width:100% !important; max-width:650px; margin:auto;}
+        .quiz-block { background: #e6eaff !important; color: #222 !important; border-radius: 14px; width:100% !important; max-width:650px; margin:auto;}
         .scoretag { background: #d0ffd0 !important; color: #185a18 !important; }
-        .stButton>button { background: #1957ba; color: #fff; border-radius: 8px; font-size: 1.1em; }
+        .stButton>button { background: #1957ba; color: #fff; border-radius: 8px; font-size: 1.09em; }
         .stButton>button:hover { background: #174a9e;}
         </style>
         """,
         unsafe_allow_html=True
     )
 
-# --- Mobile scaling + radio wrap ---
+# --- Mobile + Tablet scaling and radio stacking ---
 st.markdown("""
 <style>
+body, .stApp {
+    font-size: 1.05em !important;
+    font-family: 'Segoe UI', 'Arial', sans-serif !important;
+}
+@media (max-width: 1100px) {
+    .stRadio [role="radiogroup"] { flex-direction: column !important; }
+    .stButton>button { font-size: 1.07em !important; }
+    .flashcard, .quiz-block { padding: 1em 0.8em !important; font-size: 1.02em !important; }
+    .scoretag { font-size: 1em !important; }
+    h1, h2, h3 { font-size: 1.13em !important; }
+}
 @media (max-width: 700px) {
     .stRadio [role="radiogroup"] { flex-direction: column !important; }
     .stButton>button { font-size: 1em !important; }
-    h1, h2, h3 { font-size: 1.2em !important; }
-    .flashcard, .quiz-block { padding: 1em 0.6em !important; font-size: 1em !important; }
-    .scoretag { font-size: 1em !important; }
+    .flashcard, .quiz-block { padding: 0.6em 0.3em !important; font-size: 0.97em !important; }
+    h1, h2, h3 { font-size: 1em !important; }
 }
 </style>
 """, unsafe_allow_html=True)
@@ -100,11 +110,22 @@ with st.sidebar.expander("❓ Mini-FAQ / Hilfe", expanded=False):
     - **Wie funktioniert die App?**  
       → Wähle ein Thema, mache das Quiz, lerne mit Flashcards.
     """)
+# --- Optional: Buy me a coffee sidebar button ---
+st.sidebar.markdown(
+    """
+    <div style='text-align:center;margin-top:2em;'>
+      <a href="https://www.paypal.com/paypalme/ayushpareek1990" target="_blank"
+         style="background:#ffd700;padding:11px 24px;border-radius:24px;color:#222;font-weight:700;text-decoration:none;font-size:1.07em;box-shadow:0 1px 4px #3332;">
+         ☕️ Buy me a coffee
+      </a>
+      <div style="color:#aaa; font-size:0.9em; margin-top:0.4em;">Support helps keep this app free!</div>
+    </div>
+    """, unsafe_allow_html=True
+)
 
 if "progress" not in st.session_state:
     st.session_state.progress = {t: {"quizzes": 0, "flashcards": 0} for t in topics}
 
-# Calculate overall quiz progress
 all_quizzes = sum(len(content[t].get("quizzes", [])) for t in topics)
 total_done = sum(
     sum(
@@ -124,20 +145,10 @@ st.sidebar.markdown(
 )
 st.sidebar.markdown("<br>", unsafe_allow_html=True)
 
-st.sidebar.markdown(
-    """
-    <a href="https://www.paypal.com/paypalme/ayushpareek1990" target="_blank"
-       style="background:#ffd700;padding:9px 18px;border-radius:22px;color:#222;font-weight:600;text-decoration:none;">
-        ☕️ Buy me a coffee!
-    </a>
-    """, unsafe_allow_html=True
-)
-
-# -------------- TAB SELECTOR --------------
+# -------------- TAB SELECTOR (vertical for all screens) --------------
 tab_choice = st.radio(
     "Bereich auswählen:",
     ("Erklärung", "Quiz", "Flashcards", "Sprechen", "FAQ"),
-    horizontal=True,
     index=0
 )
 
@@ -285,7 +296,7 @@ if tab_choice == "FAQ":
       → Wähle ein Thema, mache das Quiz, lerne mit Flashcards.
     """)
 
-# -------------- Footer --------------
+# -------------- Main page Buy Me a Coffee button --------------
 st.markdown(
     """
     <div style='text-align:center; margin: 2em 0 1em 0;'>
@@ -294,11 +305,13 @@ st.markdown(
          ☕️ Buy me a coffee on PayPal
       </a>
       <div style="color:#888; font-size:1em; margin-top:0.5em;">
-        This project is 100% free for the community. <br>Support = more features for everyone!
+        This project is 100% free for the community.<br>Support = more features for everyone!
       </div>
     </div>
     """, unsafe_allow_html=True
 )
+
+# -------------- Footer --------------
 st.markdown(
     "<hr style='margin:2rem 0'>"
     "<div style='text-align:center; color: #888; font-size:1em;'>"
