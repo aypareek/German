@@ -84,7 +84,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-if st.sidebar.button("🔄 Alles zurücksetzen", key="reset_button"):
+if st.sidebar.button("Alles zurücksetzen/Reset", key="reset_button"):
     for k in list(st.session_state.keys()):
         del st.session_state[k]
     st.rerun()
