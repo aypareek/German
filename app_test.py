@@ -64,7 +64,7 @@ if not st.session_state.welcomed:
     st.markdown(
         """
         <div style='background:#e6eaff;border-left:6px solid #1957ba; padding:1.2em 1em; border-radius:14px; margin-bottom:1.2em; box-shadow:0 1px 4px #1957ba22'>
-        <h2 style='margin:0 0 0.3em 0;color:#1957ba;'>👋 Welcome to Clear B1 Exam with Ayush!</h2>
+        <h2 style='margin:0 0 0.3em 0;color:#1957ba !important; '>👋 Welcome to Clear B1 Exam with Ayush!</h2>
         <ul style='margin:0.5em 0 0 1.2em; font-size:1.1em;'>
           <li>Pick a topic on the left (sidebar).</li>
           <li>Try the quizzes, flip flashcards, and practice speaking.</li>
