@@ -287,6 +287,19 @@ if tab_choice == "FAQ":
 
 # -------------- Footer --------------
 st.markdown(
+    """
+    <div style='text-align:center; margin: 2em 0 1em 0;'>
+      <a href="https://www.paypal.com/paypalme/ayushpareek1990" target="_blank"
+         style="background:#ffd700;padding:13px 28px;border-radius:26px;color:#222;font-weight:700;text-decoration:none;font-size:1.19em;box-shadow:0 1px 6px #3332;">
+         ☕️ Buy me a coffee on PayPal
+      </a>
+      <div style="color:#888; font-size:1em; margin-top:0.5em;">
+        This project is 100% free for the community. <br>Support = more features for everyone!
+      </div>
+    </div>
+    """, unsafe_allow_html=True
+)
+st.markdown(
     "<hr style='margin:2rem 0'>"
     "<div style='text-align:center; color: #888; font-size:1em;'>"
     "Made with ❤️ by Ayush • Powered by Streamlit & YAML • <a style='color:#1957ba;text-decoration:underline' href='https://www.telc.net/en/candidates/language-examinations/tests/german/b1.html' target='_blank'>Official telc B1 Info</a>"

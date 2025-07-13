@@ -1,3 +1,408 @@
+
+A1 Grammar:
+  explanation: |
+    # German Grammar – A1: Rules, Logic, and Examples (in English)
+
+    This is a complete beginner's summary of the most important A1 grammar topics—with **logic and explanation** for each.
+
+    ---
+    ## **1. Personal Pronouns**
+
+    **Logic:**  
+    Personal pronouns replace nouns to avoid repetition and match the sentence subject/object ("who/whom/to whom").  
+    They change for person, number, and case (nominative, accusative, dative).
+
+    | Person   | Nominative | Accusative | Dative   | English   |
+    |----------|------------|------------|----------|-----------|
+    | ich      | ich        | mich       | mir      | I / me    |
+    | du       | du         | dich       | dir      | you (sg.) |
+    | er       | er         | ihn        | ihm      | he / him  |
+    | sie      | sie        | sie        | ihr      | she / her |
+    | es       | es         | es         | ihm      | it        |
+    | wir      | wir        | uns        | uns      | we / us   |
+    | ihr      | ihr        | euch       | euch     | you (pl.) |
+    | sie/Sie  | sie/Sie    | sie/Sie    | ihnen/Ihnen | they / you (formal) |
+
+    **How to use:**  
+    - Nominative is always for the subject ("who does...?").
+    - Accusative for the direct object ("whom/what does someone...?")
+    - Dative for the indirect object ("to/for whom?").
+
+    **Examples:**  
+    - Ich sehe dich. (I see you.)
+    - Kannst du mir helfen? (Can you help me?)
+
+    ---
+    ## **2. Present Tense Verb Conjugation**
+
+    **Logic:**  
+    Verbs change ending depending on who is doing the action (the subject).  
+    The present tense is formed with: verb stem + ending (-e, -st, -t, -en, -t, -en).
+
+    **Regular verbs:**  
+    - machen: ich mache, du machst, er macht, wir machen, ihr macht, sie machen
+
+    **Irregular verbs:**  
+    - Some verbs have vowel changes (Umlaut or stem change) for "du" and "er/sie/es".
+    - sein: ich bin, du bist, er ist, wir sind, ihr seid, sie sind  
+    - haben: ich habe, du hast, er hat, wir haben, ihr habt, sie haben
+
+    **Pitfall:**  
+    - Don't add extra -e to "du arbeitest", not "du arbeiteste".
+
+    **Examples:**  
+    - Ich arbeite in Berlin. (I work in Berlin.)
+    - Du lernst Deutsch. (You learn German.)
+    - Wir gehen nach Hause. (We go home.)
+
+    ---
+    ## **3. Questions and Negation**
+
+    **Logic:**  
+    - Yes/No questions: verb first ("Kommst du?" – Are you coming?)
+    - W-questions: W-word first, then verb ("Wo wohnst du?" – Where do you live?)
+    - "nicht" = "not" (for verbs and adjectives); "kein" = "no"/"not any" (for nouns with no article).
+
+    **Examples:**  
+    - Arbeitest du heute? (Are you working today?)
+    - Woher kommst du? (Where are you from?)
+    - Ich habe kein Auto. (I have no car.)
+    - Ich spreche nicht Englisch. (I don't speak English.)
+
+    **Pitfall:**  
+    - "kein" goes before the noun: "Ich habe kein Buch."
+    - "nicht" goes before what you want to negate: "Ich trinke nicht Kaffee, sondern Tee." (not coffee, but tea)
+
+    ---
+    ## **4. Articles (der/die/das, ein/eine/ein)**
+
+    **Logic:**  
+    - The definite article (der/die/das) is for specific/known nouns.  
+    - The indefinite article (ein/eine/ein) is for any/unknown noun (like "a/an" in English).
+
+    |        | Masculine | Feminine | Neuter | Plural  |
+    |--------|-----------|----------|--------|---------|
+    | the    | der       | die      | das    | die     |
+    | a/an   | ein       | eine     | ein    | —       |
+
+    **Pitfall:**  
+    - No indefinite article for plural ("—").
+    - Article changes with gender and case: "der Mann", "den Mann", "dem Mann".
+
+    **Examples:**  
+    - Ich habe **einen** Hund. (I have a dog.)
+    - Sie liest **das** Buch. (She reads the book.)
+
+    ---
+    ## **5. Plural Forms**
+
+    **Logic:**  
+    German plurals are not always regular. Common endings are: -e, -en, -er, -s or with an umlaut.  
+    There are rules, but many exceptions—you must learn them as vocabulary!
+
+    | Singular   | Plural      |
+    |------------|-------------|
+    | das Buch   | die Bücher  |
+    | die Frau   | die Frauen  |
+    | der Tisch  | die Tische  |
+    | das Auto   | die Autos   |
+
+    **Examples:**  
+    - Zwei Frauen lesen Bücher. (Two women are reading books.)
+    - Die Kinder spielen. (The children are playing.)
+
+    **Pitfall:**  
+    - Words ending in -o often take -s in plural: das Auto → die Autos.
+
+    ---
+    ## **6. Accusative and Dative Cases**
+
+    **Logic:**  
+    - Accusative is for the direct object ("whom/what").
+    - Dative is for the indirect object ("to/for whom/what").
+
+    | Masculine   | Nominative | Accusative | Dative    |
+    |-------------|------------|------------|-----------|
+    | der Mann    | der Mann   | den Mann   | dem Mann  |
+    | ein Mann    | ein Mann   | einen Mann | einem Mann|
+
+    **Signal words:**  
+    - Accusative: after "haben", "sehen", "brauchen", etc.
+    - Dative: after "helfen", "geben", and prepositions like "mit", "zu", "bei"
+
+    **Examples:**  
+    - Ich sehe den Mann. (I see the man. – accusative)
+    - Ich gebe dem Mann das Buch. (I give the book to the man. – dative + accusative)
+
+    **Pitfall:**  
+    - Many beginners forget to use dative after "mit": "mit dem Freund" (not "mit den Freund").
+
+    ---
+    ## **7. Separable & Inseparable Verbs**
+
+    **Logic:**  
+    - Separable verbs have a prefix that moves to the end in main clauses ("aufstehen").
+    - Inseparable verbs keep their prefix together ("besuchen").
+
+    **Examples:**  
+    - Ich **stehe** um 7 Uhr **auf**. (I get up at 7 o'clock.)
+    - Ich **besuche** meine Oma. (I visit my grandma.)
+
+    **Pitfall:**  
+    - In subordinate clauses (weil, dass), the prefix does not separate: "..., weil ich **aufstehe**."
+
+    ---
+    ## **8. Prepositions**
+
+    **Logic:**  
+    Prepositions in German often demand a specific case (accusative, dative, sometimes genitive).
+
+    | Preposition | Case      | Example                        |
+    |-------------|-----------|--------------------------------|
+    | mit         | Dative    | mit dem Freund (with the friend) |
+    | für         | Accusative| für den Hund (for the dog)     |
+    | zu          | Dative    | zur Schule (to the school)     |
+    | nach        | Dative    | nach Hause, nach Deutschland   |
+    | in          | Acc./Dat. | in die Schule (acc.), in der Schule (dat.) |
+
+    **Pitfall:**  
+    - "Wechselpräpositionen" (in, an, auf, über, unter, vor, hinter, zwischen, neben):  
+      Use accusative for movement ("wohin?") and dative for position ("wo?").
+
+    **Examples:**  
+    - Ich gehe **in** die Stadt. (I'm going to town. – accusative, movement)
+    - Ich bin **in** der Stadt. (I'm in town. – dative, position)
+
+    ---
+
+    (For Modal verbs, Word order, Possessive pronouns, Adjective endings, etc., just ask for more detail in English!)
+
+  quizzes:
+    - question: "What is the accusative object in 'Ich habe einen Hund'?"
+      options: ["einen Hund", "ich", "habe"]
+      answer: "einen Hund"
+      explanation: "'einen Hund' is the object (whom/what?)."
+      grammar_hint: |
+        **Accusative object:**  
+        Whom or what do I have?  
+        Answer: einen Hund (a dog).
+    - question: "What is the correct personal pronoun for 'we'?"
+      options: ["wir", "ihr", "sie"]
+      answer: "wir"
+      explanation: "'wir' = we"
+      grammar_hint: |
+        **Personal pronouns:**  
+        ich = I, du = you, wir = we, ihr = you (pl), sie = they
+
+    - question: "Which possessive pronoun: '____ Name ist Anna.'"
+      options: ["Mein", "Dein", "Ihr"]
+      answer: "Mein"
+      explanation: "Ich → mein."
+      grammar_hint: |
+        **Possessive pronouns:**  
+        mein (my), dein (your), sein (his), ihr (her), unser (our), euer (your pl), ihr/Ihr (their/your formal).
+
+    - question: "How do you ask: 'Where do you live?'"
+      options: ["Wo wohnst du?", "Wo heißt du?", "Wo hast du?"]
+      answer: "Wo wohnst du?"
+      explanation: "W-question + verb + subject."
+      grammar_hint: |
+        **W-questions:**  
+        Always: W-word + verb + subject + ...  
+        Example: Wo wohnst du?
+
+    - question: "What is the plural of 'Buch'?"
+      options: ["Bücher", "Buche", "Buchen"]
+      answer: "Bücher"
+      explanation: "Buch → Bücher"
+      grammar_hint: |
+        **Plural formation:**  
+        Many nouns in German form plural with Umlaut + -er: Buch → Bücher.
+
+  flashcards:
+    - front: "ich – du – er – sie – es – wir – ihr – sie – Sie"
+      back: "I – you – he – she – it – we – you (pl) – they – You (formal)"
+    - front: "machen: ich mache, du machst, er macht"
+      back: "to do: I do, you do, he does"
+    - front: "nicht vs. kein"
+      back: "'nicht' for verbs/adjectives, 'kein' for nouns"
+    - front: "Ich wohne in Berlin."
+      back: "I live in Berlin."
+    - front: "aufstehen – separable verb"
+      back: "to get up – separable verb"
+    - front: "mit (+ Dative)"
+      back: "Ich fahre mit dem Bus."
+    - front: "Können – ich kann, du kannst, er kann"
+      back: "can – I can, you can, he can"
+    - front: "Mein Name ist Anna."
+      back: "My name is Anna."
+    - front: "Ich habe einen Hund."
+      back: "I have a dog."
+    - front: "The plural of 'Kind'?"
+      back: "Kinder (children)"
+
+
+Plural:
+  explanation: |
+    # German Plural – Logic, Rules & Examples
+
+    In German, there are **many ways to form the plural**. The plural form depends on gender, the word ending, and sometimes word origin.  
+    There are **five main patterns**—but lots of exceptions!
+
+    ---
+    ## **1. How to Form the Plural – The Five Most Common Endings**
+
+    | Ending      | Example (Singular → Plural)   | Typical Group                     |
+    |-------------|-----------------------------|-----------------------------------|
+    | -e          | der Tisch → die Tisch**e**      | Masculine/neuter, often short words|
+    | -er (+ Umlaut)| das Buch → die Büch**er**    | Neuter, often one syllable        |
+    | -n/-en      | die Blume → die Blume**n**      | Feminine (most!), -e, -in         |
+    | -s          | das Auto → die Auto**s**        | Loanwords, abbreviations          |
+    | Umlaut      | der Apfel → die Äpfel           | Masculine/neuter, vowel change    |
+    | (no ending) | der Lehrer → die Lehrer         | Masculine ending in -er/-el/-en   |
+
+    ---
+    ## **2. Logic and Tips**
+
+    **Masculine:**  
+    - Usually add -e (der Tag → die Tage)
+    - Often add Umlaut (der Stuhl → die Stühle)
+    - If ending in -er, -el, -en: usually **no ending** (der Lehrer → die Lehrer, der Apfel → die Äpfel)
+
+    **Feminine:**  
+    - Nearly always -n or -en (die Frau → die Frauen, die Blume → die Blumen)
+    - NEVER Umlaut for professions ending in -in: die Lehrerin → die Lehrerinnen
+
+    **Neuter:**  
+    - Often -e (das Bild → die Bilder)
+    - -er plus Umlaut (das Kind → die Kinder, das Buch → die Bücher)
+    - -s for foreign words (das Handy → die Handys)
+
+    **Loanwords:**  
+    - Almost always -s: das Hotel → die Hotels
+
+    ---
+    ## **3. Umlaut in the Plural**
+
+    Many masculine and neuter nouns get an Umlaut (a→ä, o→ö, u→ü) in the plural.
+    - der Apfel → die Äpfel
+    - der Stuhl → die Stühle
+    - das Buch → die Bücher
+
+    **Tip:**  
+    If the word has a, o, or u in the stem, check if the plural adds an Umlaut!
+
+    ---
+    ## **4. No Plural Ending**
+
+    - Masculine nouns ending with -er, -el, or -en: der Lehrer → die Lehrer, der Apfel → die Äpfel (only Umlaut)
+    - das Mädchen → die Mädchen (neuter diminutive)
+
+    ---
+    ## **5. Plural Articles and Adjective Endings**
+
+    - Plural article is always **die**:  
+      der Mann → die Männer, das Kind → die Kinder
+    - In plural, adjectives after the article usually end with -en:  
+      die kleinen Kinder (the small children)
+
+    ---
+    ## **6. Common Exceptions and Pitfalls**
+
+    - der Junge → die Jungen (masculine ending in -en)
+    - die Mutter → die Mütter, der Vater → die Väter (vowel change and -er)
+    - das Museum → die Museen (foreign ending)
+
+    ---
+    ## **7. Examples for Each Plural Type**
+
+    | Pattern         | Singular    | Plural        |
+    |-----------------|-------------|--------------|
+    | -e              | der Hund    | die Hunde    |
+    | -er + Umlaut    | das Haus    | die Häuser   |
+    | -n/-en          | die Lampe   | die Lampen   |
+    | -s              | das Taxi    | die Taxis    |
+    | (no ending)     | der Lehrer  | die Lehrer   |
+    | Umlaut          | der Fuß     | die Füße     |
+
+    ---
+    ## **8. Everyday Plural Usage**
+
+    - Zwei Stühle stehen am Tisch. (Two chairs are at the table.)
+    - My friends come from many countries.
+    - I have no siblings.
+
+    ---
+    ## **9. Common Traps**
+
+    - Feminine nouns almost never take an Umlaut!
+    - Many words ending in -er/-el in the singular have no ending in the plural.
+    - Some words change the stem in the plural (der Mann → die Männer)
+
+    ---
+    **Tip:**  
+    Always learn new nouns **with the article and plural form**:  
+    Example: das Bild, die Bilder
+
+  quizzes:
+    - question: "What is the plural of 'das Bild'?"
+      options: ["Bilder", "Bilds", "Bilde"]
+      answer: "Bilder"
+      explanation: "'Bild' → 'Bilder' (with -er ending)"
+      grammar_hint: |
+        **Neuter words often take -er in plural:** das Bild → die Bilder
+
+    - question: "Which article is ALWAYS used in the plural?"
+      options: ["die", "der", "das"]
+      answer: "die"
+      explanation: "The plural definite article is always 'die' for all genders."
+      grammar_hint: |
+        **Plural article:** always 'die'
+
+    - question: "Which word takes an Umlaut in the plural?"
+      options: ["der Apfel", "die Lampe", "das Taxi"]
+      answer: "der Apfel"
+      explanation: "der Apfel → die Äpfel (Umlaut a→ä)"
+      grammar_hint: |
+        **Many masculine/neuter words add an Umlaut in plural (a→ä, o→ö, u→ü)**
+
+    - question: "What is the plural of 'die Lehrerin'?"
+      options: ["die Lehrerinnen", "die Lehrerins", "die Lehrerinen"]
+      answer: "die Lehrerinnen"
+      explanation: "Feminine profession nouns in -in add -innen"
+      grammar_hint: |
+        **Professions ending -in:** always -innen in plural
+
+    - question: "What's wrong: 'Ich habe viele Büchers.'"
+      options: ["'Büchers' is wrong", "'viele' is wrong", "'Ich habe' is wrong"]
+      answer: "'Büchers' is wrong"
+      explanation: "No -s in plural of 'Buch': das Buch → die Bücher"
+      grammar_hint: |
+        **Never 's' for 'Buch':** das Buch → die Bücher
+
+  flashcards:
+    - front: "der Tisch – die Tische"
+      back: "table – tables"
+    - front: "das Haus – die Häuser"
+      back: "house – houses (with Umlaut and -er)"
+    - front: "die Lampe – die Lampen"
+      back: "lamp – lamps"
+    - front: "das Auto – die Autos"
+      back: "car – cars (foreign words, add -s)"
+    - front: "der Lehrer – die Lehrer"
+      back: "teacher – teachers (no ending)"
+    - front: "der Apfel – die Äpfel"
+      back: "apple – apples (with Umlaut)"
+    - front: "die Lehrerin – die Lehrerinnen"
+      back: "female teacher – female teachers (-innen ending)"
+    - front: "Which article in plural?"
+      back: "Always die!"
+    - front: "Neuter plural often?"
+      back: "-er and sometimes Umlaut: das Bild – die Bilder"
+    - front: "Tip: Always learn a noun with article and plural!"
+      back: "Example: das Bild, die Bilder"
+
+
 Tenses:
   explanation: |
     ## Zeitformen (Tenses) – Präsens, Perfekt, Präteritum, Futur I
@@ -512,6 +917,232 @@ Passive Voice:
       back: "The car has not yet been repaired. (Perfekt Passiv, Negation)"
     - front: "Wer wird eingeladen?"
       back: "Who is being invited? (Question, Passiv)"
+A2 Grammar:
+  explanation: |
+    # German Grammar – A2: Rules, Logic & Examples (in English)
+
+    This is a compact summary with explanations, logic, and common traps for German A2 level.
+
+    ---
+    ## **1. Perfekt (Present Perfect) with haben/sein**
+
+    **Logic:**  
+    The Perfekt describes completed actions in the past, especially in spoken German.
+
+    - Formation: **haben/sein** (conjugated) + **Participle II (past participle)**
+      - Use "haben" for most verbs
+      - Use "sein" for movement/change verbs (gehen, fahren, werden) and bleiben
+
+    **Example:**  
+    - Ich **habe** das Buch **gelesen**. (I have read the book.)
+    - Er **ist** nach Berlin **gefahren**. (He has gone to Berlin.)
+
+    **Trap:**  
+    - Many verbs like "gehen", "fahren", "kommen", "bleiben" use "sein"!
+    - The participle usually ends in -t (regular: gemacht, gesagt) or -en (irregular: gegangen, geschrieben).
+
+    ---
+    ## **2. Separable & Inseparable Verbs (A2 Extension)**
+
+    **Logic:**  
+    In the Perfekt, "ge-" goes between prefix and stem (for separable verbs), and **no "ge-"** for inseparable verbs.
+
+    - **separable:**  
+      - aufstehen → ich bin **aufgestanden** (I got up)
+    - **inseparable:**  
+      - besuchen → ich habe **besucht** (I visited)
+
+    **Trap:**  
+    - Never say: *ich habe gebesucht* ❌
+
+    ---
+    ## **3. Two-way Prepositions (Wechselpräpositionen: Accusative/Dative)**
+
+    **Logic:**  
+    These prepositions require **accusative for movement** ("where to?") and **dative for position** ("where?").
+
+    | Preposition | Movement Example (Accusative)   | Position Example (Dative)  |
+    |-------------|-------------------------------|-----------------------------|
+    | in          | Ich gehe **in die Küche**.    | Ich bin **in der Küche**.   |
+    | auf         | Ich lege das Buch **auf den Tisch**. | Das Buch liegt **auf dem Tisch**. |
+    | an          | Ich hänge das Bild **an die Wand**.  | Das Bild hängt **an der Wand**.   |
+    | etc.        |                               |                             |
+
+    **Trap:**  
+    - "in die" = accusative (direction), "in der" = dative (location).
+
+    ---
+    ## **4. Relative Clauses**
+
+    **Logic:**  
+    Relative clauses connect two sentences. The relative pronoun matches the noun it refers to (case, gender, number).
+
+    - Nominative: der/die/das/die
+    - Accusative: den/die/das/die
+    - Dative: dem/der/dem/denen
+
+    **Examples:**  
+    - Das ist der Mann, **der** in Berlin wohnt. (That’s the man who lives in Berlin.)
+    - Die Frau, **die** ein Auto fährt, ist meine Mutter.
+    - Das Buch, **das** ich lese, ist spannend.
+
+    **Trap:**  
+    - The verb goes at the end of the relative clause.
+    - After a preposition: "Die Frau, **mit der** ich spreche..." (The woman I am speaking with...)
+
+    ---
+    ## **5. Adjective Endings after Articles**
+
+    **Logic:**  
+    The ending depends on article, case, and gender.
+
+    - After **definite article**: der **alte** Mann (the old man)
+    - After **indefinite article**: ein **alter** Mann (an old man)
+    - Without article: **alter** Mann (old man)
+
+    |      | Masculine      | Feminine      | Neuter        | Plural       |
+    |------|----------------|---------------|---------------|--------------|
+    | Nom  | der **alte**   | die **alte**  | das **alte**  | die **alten**|
+    | Acc  | den **alten**  | die **alte**  | das **alte**  | die **alten**|
+    | Dat  | dem **alten**  | der **alten** | dem **alten** | den **alten**|
+
+    **Example:**  
+    - Ich sehe einen **neuen** Film. (I see a new movie.)
+    - Das ist eine **kleine** Katze. (That is a small cat.)
+
+    **Trap:**  
+    - Plural after article is always -en: die **neuen** Häuser.
+
+    ---
+    ## **6. Comparative & Superlative**
+
+    **Logic:**  
+    - Comparative: adjective + **-er** (“größer” = bigger)
+    - Superlative: am + adjective + **-sten** (“am größten” = biggest)
+
+    **Examples:**  
+    - Berlin ist **größer** als Leipzig. (Berlin is bigger than Leipzig.)
+    - Das ist das **beste** Buch. (That is the best book.)
+    - Mein Freund läuft **am schnellsten**. (My friend runs the fastest.)
+
+    **Trap:**  
+    - Many adjectives add an umlaut in comparative/superlative: “jung” → “jünger”, “alt” → “älter”.
+
+    ---
+    ## **7. Subordinate Clauses with weil, dass, wenn, obwohl**
+
+    **Logic:**  
+    The verb goes **at the end** in subordinate clauses.
+
+    **Examples:**  
+    - Ich komme heute nicht, **weil ich krank bin**. (because I am sick)
+    - Sie sagt, **dass sie morgen Zeit hat**. (that she has time tomorrow)
+    - Wenn es regnet, bleibe ich zu Hause. (If it rains, I stay home.)
+    - Ich gehe ins Kino, **obwohl ich müde bin**. (although I am tired)
+
+    **Trap:**  
+    - Never: “weil ich bin krank” ❌ (verb must be at the end)
+
+    ---
+    ## **8. Reflexive Verbs**
+
+    **Logic:**  
+    These verbs use a reflexive pronoun (myself, yourself, etc).
+
+    **Examples:**  
+    - Ich **wasche mich**. (I wash myself.)
+    - Du **erinnerst dich** an das Konzert. (You remember the concert.)
+
+    **Trap:**  
+    - Always use the correct pronoun: “Wir treffen **uns**.” (We meet.)
+
+    ---
+    ## **9. Modal Verbs with Infinitive**
+
+    **Logic:**  
+    Modal verb in position 2, main verb (infinitive) at the end.
+
+    **Examples:**  
+    - Ich **möchte** ein Eis **essen**. (I want to eat an ice cream.)
+    - Wir **müssen** heute **arbeiten**. (We have to work today.)
+
+    **Trap:**  
+    - Not: “Ich möchte essen ein Eis.” ❌
+
+    ---
+    ## **10. Word Order in Main and Subordinate Clauses**
+
+    **Logic:**  
+    - Main clause: Subject – Verb – Object
+    - Subordinate clause: conjunction (weil, dass, wenn, etc.) → verb at the end
+
+    **Examples:**  
+    - Ich gehe ins Kino. (I go to the cinema.)
+    - Weil ich müde **bin**, bleibe ich zu Hause. (Because I am tired, I stay home.)
+
+    **Trap:**  
+    - Not: “Weil ich bin müde…” (Verb must be at the end!)
+
+    ---
+
+    (Ask for more details for any A2 topic—e.g. subjunctive, indirect questions, indirect speech, etc.)
+
+  quizzes:
+    - question: "What is the Participle II (past participle) of 'sehen'?"
+      options: ["gesehen", "gesehenen", "gesieht"]
+      answer: "gesehen"
+      explanation: "'sehen' → 'gesehen'."
+      grammar_hint: |
+        **Perfekt Rule:**  
+        Participle II of irregular verbs often has ge-...-en: sehen → gesehen.
+    - question: "Which preposition can take Dative *and* movement?"
+      options: ["in", "mit", "für"]
+      answer: "in"
+      explanation: "'in' can be dative or accusative, depending on 'where?' or 'where to?'."
+      grammar_hint: |
+        **Two-way prepositions:**  
+        in, an, auf, über, unter, vor, hinter, zwischen, neben  
+        → movement = accusative; position = dative.
+    - question: "What is the reflexive pronoun for 'wir'?"
+      options: ["uns", "euch", "sich"]
+      answer: "uns"
+      explanation: "'Wir waschen uns.'"
+      grammar_hint: |
+        **Reflexive pronouns:**  
+        ich – mich, du – dich, er/sie/es – sich, wir – uns, ihr – euch, sie/Sie – sich.
+    - question: "How do you form the comparative of 'alt'?"
+      options: ["älter", "alter", "am altesten"]
+      answer: "älter"
+      explanation: "Comparative: adjective + -er, often with umlaut."
+      grammar_hint: |
+        **Comparative Rule:**  
+        Comparative: adjective + -er, e.g. alt → älter, jung → jünger, schön → schöner.
+    - question: "What is at the end of a subordinate clause?"
+      options: ["the verb", "the subject", "the object"]
+      answer: "the verb"
+      explanation: "In subordinate clauses, the verb is always at the end."
+      grammar_hint: |
+        **Subordinate clause word order:**  
+        Conjunction + subject + ... + verb (at the end).  
+        Example: Ich glaube, dass **du Recht hast**.
+
+  flashcards:
+    - front: "sehen – ich habe gesehen"
+      back: "see – I have seen (Perfekt)"
+    - front: "in die Schule / in der Schule"
+      back: "to school (movement, accusative) / at school (location, dative)"
+    - front: "Comparative: größer, schöner, älter"
+      back: "bigger, more beautiful, older"
+    - front: "weil ... verb at the end"
+      back: "because ... the verb goes to the end"
+    - front: "Ich wasche mich"
+      back: "I wash myself (reflexive)"
+    - front: "Wir müssen arbeiten."
+      back: "We have to work. (modal + infinitive at end)"
+    - front: "Ich lade dich ein."
+      back: "I invite you."
+    - front: "Das ist der Mann, der in Berlin wohnt."
+      back: "That’s the man who lives in Berlin (relative clause)."
 
 
 A1_TimeAndDates:
@@ -1721,6 +2352,323 @@ Konjunktiv II:
       back: "If I had time..."
     - front: "Ich wünschte, ich wäre dort."
       back: "I wish I were there."
+Ob und Falls Clauses:
+  explanation: |
+    # Nebensätze mit "ob" und "falls" – Logik, Beispiele, Tipps
+
+    ---
+    ## **1. "ob" – if/whether (indirect questions, uncertainty)**
+
+    **Logik:**  
+    "ob" benutzt man, wenn man nicht weiß, ob etwas passiert – es gibt zwei oder mehr Möglichkeiten (yes/no).  
+    Es leitet indirekte Fragen oder Sätze mit Unsicherheit ein.
+
+    **Satzstellung:**  
+    "ob" + Subjekt + ... + Verb (am Ende)
+
+    **Beispiele:**  
+    - Ich weiß nicht, **ob** er kommt.  
+      (I don’t know **if/whether** he is coming.)
+    - Kannst du mir sagen, **ob** der Supermarkt offen ist?  
+      (Can you tell me **if/whether** the supermarket is open?)
+    - Sie fragt, **ob** du morgen Zeit hast.
+
+    **Falle:**  
+    - **Nie:** "Ob er kommt, ich weiß nicht." ❌  
+    - **Richtig:** "Ich weiß nicht, ob er kommt." ✔️
+
+    ---
+    ## **2. "falls" – if, in case (condition, possibility)**
+
+    **Logik:**  
+    "falls" benutzt man, wenn man eine Bedingung/“wenn” meint, meist in formeller oder schriftlicher Sprache.  
+    Oft kann man "falls" durch "wenn" ersetzen.
+
+    **Satzstellung:**  
+    "Falls" + Subjekt + ... + Verb (am Ende), dann Hauptsatz.
+
+    **Beispiele:**  
+    - **Falls** du Fragen hast, schreib mir eine E-Mail.
+      (If you have questions, write me an email.)
+    - **Falls** es morgen regnet, bleiben wir zu Hause.
+    - **Falls** Sie Hilfe brauchen, rufen Sie mich an.
+
+    **Unterschied zu “wenn”:**  
+    - "wenn" = immer/regelmäßig/real  
+    - "falls" = vielleicht/nur für diesen Fall, oft formell
+
+    **Falle:**  
+    - "falls" nie für indirekte Fragen oder Unsicherheit, nur für Bedingungen.
+
+    ---
+    ## **3. Vergleich: "ob" vs. "falls"**
+
+    - **ob:** Unsicherheit, Wahl, indirekte Frage ("I don’t know IF...").
+      - Ich weiß nicht, **ob** er kommt.  
+    - **falls:** echte Bedingung ("IF you come, then...").
+      - **Falls** du kommst, sag Bescheid.
+
+    ---
+    ## **4. Wortstellung**
+
+    - "ob" und "falls" leiten Nebensätze ein: das Verb am Ende!
+      - Ich weiß nicht, ob sie Zeit **hat**.
+      - Falls er kommt, gehen wir essen.
+
+    ---
+
+    ## **5. Beispiele Alltag**
+
+    - Sie fragt, ob du Kaffee trinkst.
+    - Ich bin mir nicht sicher, ob ich morgen frei habe.
+    - Falls du Hunger hast, gibt es Pizza.
+    - Falls der Bus zu spät ist, nehmen wir ein Taxi.
+
+  quizzes:
+    - question: "Welche Konjunktion benutzt man für indirekte Fragen mit Unsicherheit?"
+      options: ["ob", "falls", "wenn"]
+      answer: "ob"
+      explanation: "'ob' für Unsicherheit/indirekte Fragen ('I don't know if...')."
+      grammar_hint: |
+        **Logik:**  
+        "ob" für yes/no Fragen, nie für echte Bedingungen.
+    - question: "Was bedeutet 'Falls du Zeit hast, komm vorbei'?"
+      options: [
+        "Wenn du Zeit hast, komm vorbei.",
+        "Ich weiß nicht, ob du Zeit hast.",
+        "Ob du Zeit hast, komm vorbei."
+      ]
+      answer: "Wenn du Zeit hast, komm vorbei."
+      explanation: "'falls' = Bedingung ('if', wie 'wenn')."
+      grammar_hint: |
+        **Logik:**  
+        "falls" für Bedingungen, oft austauschbar mit "wenn".
+
+    - question: "Was steht am Ende eines 'ob'-Satzes?"
+      options: ["das Verb", "das Subjekt", "der Artikel"]
+      answer: "das Verb"
+      explanation: "Im Nebensatz steht das Verb immer am Ende."
+      grammar_hint: |
+        **Wortstellung:**  
+        "ob" + Subjekt + ... + Verb (am Ende)
+
+    - question: "Wann benutzt man 'ob' und wann 'falls'?"
+      options: [
+        "'ob' bei Unsicherheit, 'falls' bei Bedingung",
+        "Beides ist gleich",
+        "'ob' bei Bedingungen, 'falls' bei Fragen"
+      ]
+      answer: "'ob' bei Unsicherheit, 'falls' bei Bedingung"
+      explanation: "'ob' = Unsicherheit/Frage, 'falls' = Bedingung"
+
+  flashcards:
+    - front: "Ich weiß nicht, ob er kommt."
+      back: "I don't know if he is coming. ('ob' for uncertainty/choice)"
+    - front: "Falls du Fragen hast, schreib mir!"
+      back: "If you have questions, write me! ('falls' for condition)"
+    - front: "Kannst du mir sagen, ob das Geschäft offen ist?"
+      back: "Can you tell me if the shop is open?"
+    - front: "Falls es regnet, bleiben wir zu Hause."
+      back: "If it rains, we'll stay home."
+    - front: "'ob' vs. 'falls'"
+      back: "'ob' = uncertainty/question, 'falls' = condition/if"
+
+Polite Questions:
+  explanation: |
+    # Polite Questions in German – How and Why
+
+    In German, **polite questions** are important for being friendly and formal, especially when talking to strangers, in shops, in emails, or official situations.
+
+    ## **1. Why use polite forms?**
+    - Shows respect (especially with “Sie”)
+    - Sounds less direct or demanding
+    - More likely to get a positive/helpful response!
+
+    ## **2. The most common forms:**
+
+    ### **A. “Könnten Sie...?” / “Könnten Sie mir bitte...”**
+    - Literally: “Could you...?”
+    - Most universal polite request/question.
+    - **Example:**  
+      - **Könnten Sie mir bitte helfen?**  
+        Could you please help me?
+      - **Könnten Sie mir sagen, wo die Bank ist?**  
+        Could you tell me where the bank is?
+
+    ### **B. “Würden Sie...?”**
+    - Literally: “Would you...?”
+    - Also polite, used for offers or invitations.
+    - **Example:**  
+      - **Würden Sie das bitte wiederholen?**  
+        Would you please repeat that?
+      - **Würden Sie mir bitte eine E-Mail schicken?**  
+        Would you please send me an email?
+
+    ### **C. “Dürfte ich...?” / “Darf ich...?”**
+    - Literally: “May I...?”  
+      (“dürfte” = extra polite, “darf” = normal)
+    - **Example:**  
+      - **Darf ich Sie etwas fragen?**  
+        May I ask you something?
+      - **Dürfte ich hier sitzen?**  
+        Might I sit here? (very polite)
+
+    ### **D. “Hätten Sie...?”**
+    - “Would you have...?” (used for requests)
+    - **Example:**  
+      - **Hätten Sie vielleicht einen Moment Zeit?**  
+        Would you perhaps have a moment?
+      - **Hätten Sie das Formular für mich?**  
+        Would you have the form for me?
+
+    ### **E. “Ich hätte gern...” / “Ich möchte...”**
+    - Used to order or ask for things in a polite way.
+    - **Example:**  
+      - **Ich hätte gern einen Kaffee.**  
+        I would like a coffee.
+      - **Ich möchte einen Termin machen.**  
+        I’d like to make an appointment.
+
+    ## **3. Adding “bitte” (please)**
+    - Add “bitte” (please) for extra politeness:  
+      - **Könnten Sie mir bitte helfen?**
+      - **Hätten Sie bitte einen Stift für mich?**
+
+    ## **4. Formal vs. Informal**
+    - **Sie** = formal “you”  
+      Use with strangers, in shops, offices, official emails.
+    - **du** = informal “you”  
+      Use only with friends, family, children.
+
+    ## **5. Indirect questions with “ob” or “wo/wann/wer/...”**
+    - “Can you tell me if/where/when...?” =  
+      **Könnten Sie mir bitte sagen, ob das Geschäft offen ist?**  
+      (Could you tell me if the shop is open?)
+    - **Könnten Sie mir sagen, wie spät es ist?**  
+      (Could you tell me what time it is?)
+
+    ## **6. Model Phrases**
+    - **Könnten Sie mir bitte ...?**
+    - **Dürfte ich ...?**
+    - **Würden Sie ...?**
+    - **Ich hätte gern ...**
+    - **Ich möchte ...**
+
+    ## **7. Common polite question mistakes**
+    - Don’t just use “Kannst du ...?” with strangers (too direct).
+    - Always use “Sie” forms for adults you don’t know.
+    - Use “bitte” to soften questions or requests.
+
+  flashcards:
+    - front: "Könnten Sie mir bitte helfen?"
+      back: "Could you please help me?"
+    - front: "Dürfte ich Sie etwas fragen?"
+      back: "May I ask you something?"
+    - front: "Ich hätte gern einen Kaffee."
+      back: "I would like a coffee."
+    - front: "Würden Sie das bitte wiederholen?"
+      back: "Would you please repeat that?"
+    - front: "Könnten Sie mir sagen, wo die Bank ist?"
+      back: "Could you tell me where the bank is?"
+    - front: "Hätten Sie vielleicht einen Moment Zeit?"
+      back: "Would you perhaps have a moment?"
+
+
+Verbs ending in -ieren:
+  explanation: |
+    # German Verbs Ending in -ieren – Rules & Examples
+
+    In German, many verbs of foreign (often French or English) origin end in **-ieren** (like "telefonieren", "studieren", "reparieren", "organisieren", "fotografieren", etc.).
+
+    ---
+    ## **1. How do -ieren verbs work?**
+
+    **Logic:**  
+    - They are always **regular** in the present tense (no vowel change or stem change).
+    - **But:** The endings are the same as any other regular verb:  
+      ich -iere, du -ierst, er/sie/es -iert, wir -ieren, ihr -iert, sie/Sie -ieren
+
+    ---
+    ## **2. Perfect tense (Perfekt) – the special rule**
+
+    **Logic:**  
+    - **NO “ge-” prefix** in the past participle (Partizip II)!
+    - Perfekt: **-iert** (not "ge-...iert")  
+      Examples:
+        - telefonieren → telefoniert
+        - studieren → studiert
+        - organisieren → organisiert
+
+    **Pattern:**  
+    - Perfekt is always: **habe + ...iert**
+      - ich habe telefoniert
+      - du hast studiert
+      - er hat repariert
+
+    ---
+    ## **3. Examples**
+
+    - Ich telefoniere jeden Tag mit meinen Eltern.
+    - Sie studiert Biologie.
+    - Wir organisieren eine Party.
+    - Er hat das Handy repariert.
+    - Habt ihr das Konzert fotografiert?
+    - Wir haben viel diskutiert.
+
+    ---
+    ## **4. Common -ieren Verbs**
+
+    - studieren (to study at university)
+    - telefonieren (to telephone)
+    - reparieren (to repair)
+    - organisieren (to organize)
+    - fotografieren (to photograph)
+    - probieren (to try, taste)
+    - präsentieren (to present)
+    - markieren (to mark)
+    - interessieren (to interest)
+    - informieren (to inform)
+    - diskutieren (to discuss)
+    - investieren (to invest)
+    - kontrollieren (to check, control)
+    - passieren (to happen)
+    - trainieren (to train)
+
+    ---
+    ## **5. Common mistakes**
+
+    - **WRONG:** "Ich habe *getelefoniert*" ❌  
+      **RIGHT:** "Ich habe telefoniert" ✔️
+    - Never add “ge-” to the beginning of -ieren verbs in Perfekt!
+
+    ---
+    ## **6. Everyday tips**
+
+    - If a verb ends in -ieren, it always takes **habe** in the perfect, never **bin**.
+    - New verbs in German often use the -ieren ending (digitalisieren, googeln → gegoogelt, but digitalisieren → digitalisiert).
+
+  quizzes:
+    - question: "What is the past participle of 'telefonieren'?"
+      options: ["telefoniert", "getelefoniert", "telefoniertet"]
+      answer: "telefoniert"
+      explanation: "-ieren verbs never get a 'ge-' in Perfekt!"
+    - question: "Which is correct: 'Ich habe ...'?"
+      options: ["Ich habe organisiert.", "Ich habe georganisiert.", "Ich habe organisiertet."]
+      answer: "Ich habe organisiert."
+      explanation: "No 'ge-' for -ieren verbs in Perfekt."
+
+  flashcards:
+    - front: "studieren – ich habe studiert"
+      back: "to study (at university) – I have studied"
+    - front: "telefonieren – du hast telefoniert"
+      back: "to call – you called"
+    - front: "reparieren – er hat repariert"
+      back: "to repair – he has repaired"
+    - front: "organisieren – wir haben organisiert"
+      back: "to organize – we organized"
+    - front: "What is special about -ieren verbs in Perfekt?"
+      back: "No 'ge-' in the participle! Always 'habe ...iert'"
+
 
 Adjective Endings:
   explanation: |
@@ -2115,6 +3063,273 @@ Prepositions:
       back: "She comes from France."
     - front: "Das Treffen ist am Montag um 10 Uhr."
       back: "The meeting is on Monday at 10 o'clock."
+
+Accusative Prepositions:
+  explanation: |
+    # Prepositions Taking the Accusative in German
+
+    In German, **some prepositions always require the accusative case**.  
+    That means the noun/pronoun after them is always in the accusative (wen/was? = whom/what?).
+
+    ---
+    ## **1. The Accusative Prepositions**
+
+    The most important prepositions that **always** take the accusative are:
+
+    - **durch** – through
+    - **für** – for
+    - **gegen** – against, toward
+    - **ohne** – without
+    - **um** – around, at (time)
+    - **bis** – until, up to
+    - **entlang** – along (usually after the noun)
+
+    ---
+    ## **2. How It Works (Logic & English)**
+
+    After these prepositions, use the **accusative form** of articles/pronouns:
+    - der → **den**  
+    - die → **die**  
+    - das → **das**
+    - die (pl.) → **die**
+    - ein → **einen** (masculine)
+
+    **Example table:**
+
+    | Preposition | Meaning    | Example (German)                      | Example (English)           |
+    |-------------|------------|---------------------------------------|-----------------------------|
+    | für         | for        | Ich habe ein Geschenk **für meinen Vater**. | I have a present **for my father**. |
+    | durch       | through    | Wir gehen **durch den Park**.         | We walk **through the park**.  |
+    | gegen       | against    | Das Auto fährt **gegen einen Baum**.  | The car drives **against a tree**. |
+    | ohne        | without    | Er fährt **ohne seine Freundin**.     | He travels **without his girlfriend**. |
+    | um          | around/at  | Wir sitzen **um den Tisch**. <br> Der Film beginnt **um acht Uhr**. | We sit **around the table**.<br> The film starts **at 8 o’clock**. |
+    | bis         | until      | Ich arbeite **bis nächsten Montag**.  | I work **until next Monday**. |
+    | entlang     | along      | Wir gehen die Straße **entlang**.     | We walk **along the street**.  |
+
+    ---
+    ## **3. Common Mistakes (Traps to Avoid)**
+
+    - Don’t use the nominative! Always check:  
+      “für der Mann” ❌ → “für **den** Mann” ✔️  
+      “ohne ich” ❌ → “ohne **mich**” ✔️
+
+    - “entlang” usually comes **after** the noun:  
+      “die Straße entlang” (not: “entlang die Straße”)
+
+    ---
+    ## **4. Everyday Examples**
+
+    - Ich warte **auf dich** (but “auf” can take dative in some cases; for now, focus on the fixed list above!).
+    - Wir gehen **durch das Museum**.
+    - Er läuft **ohne Schuhe**.
+    - Wir spielen **gegen unsere Freunde**.
+    - Sie fährt **um die Stadt**.
+
+    ---
+    ## **5. Tip: Memory Trick**
+
+    Use the mnemonic: **“DOG FUBe”** (Durch, Ohne, Gegen, Für, Um, Bis, entlang)  
+    These prepositions **always** take the accusative.
+
+  quizzes:
+    - question: "Which preposition always takes the accusative?"
+      options: ["für", "mit", "zu"]
+      answer: "für"
+      explanation: "'für' always takes the accusative case."
+      grammar_hint: |
+        After "für" use the accusative: für den Mann, für meine Mutter.
+    - question: "What is the correct article after 'durch' for 'der Park'?"
+      options: ["durch den Park", "durch dem Park", "durch des Park"]
+      answer: "durch den Park"
+      explanation: "‘der’ changes to ‘den’ in the accusative."
+    - question: "Translate: 'without my friend'"
+      options: ["ohne meinen Freund", "ohne mein Freund", "ohne meiner Freund"]
+      answer: "ohne meinen Freund"
+      explanation: "'Freund' is masculine; accusative: meinen Freund."
+    - question: "Which sentence is correct?"
+      options: [
+        "Wir gehen die Straße entlang.",
+        "Wir gehen entlang die Straße.",
+        "Wir gehen auf die Straße entlang."
+      ]
+      answer: "Wir gehen die Straße entlang."
+      explanation: "‘entlang’ usually goes after the noun."
+    - question: "Which preposition does NOT take the accusative?"
+      options: ["mit", "durch", "für"]
+      answer: "mit"
+      explanation: "'mit' always takes the dative."
+
+  flashcards:
+    - front: "für + Akkusativ"
+      back: "for (Ich habe ein Geschenk für meinen Freund.)"
+    - front: "durch + Akkusativ"
+      back: "through (Wir gehen durch den Park.)"
+    - front: "ohne + Akkusativ"
+      back: "without (Er fährt ohne seinen Bruder.)"
+    - front: "um + Akkusativ"
+      back: "around/at (Wir sitzen um den Tisch. Der Film beginnt um acht Uhr.)"
+    - front: "gegen + Akkusativ"
+      back: "against (Das Auto fährt gegen einen Baum.)"
+    - front: "bis + Akkusativ"
+      back: "until (Ich arbeite bis nächsten Montag.)"
+    - front: "entlang + Akkusativ"
+      back: "along (Wir gehen die Straße entlang.)"
+    - front: "DOG FUBe"
+      back: "Durch, Ohne, Gegen, Für, Um, Bis, entlang = always accusative"
+    - front: "What is the accusative of 'der Mann'?"
+      back: "den Mann"
+    - front: "Ich habe ein Geschenk ___ meinen Vater."
+      back: "für (für meinen Vater)"
+
+
+Verbs Taking Prepositions:
+  explanation: |
+    # Verbs Taking Prepositions (Verben mit Präpositionen) – Logic, Rules & Examples
+
+    In German, many verbs **always need a preposition** before their object, just like “wait FOR,” “think ABOUT,” “depend ON” in English.  
+    Sometimes, the preposition is the same as English—but often it’s different!
+
+    ---
+    ## **1. Logic**
+
+    - In German, a preposition is often required to make the meaning clear, especially with verbs describing emotions, waiting, speaking, thinking, or remembering.
+    - The **preposition + its case** is a package: *“warten auf (Akk)”* always means “to wait for.”
+
+    **Tip:**  
+    Always learn the verb *with its preposition and case*, like a set phrase:  
+    → “warten auf (+ Akkusativ)” = “to wait for”
+
+    ---
+    ## **2. Most Common Verb + Preposition Combinations**
+
+    | Verb              | Preposition + Case | English Translation              | Example (German → English)         |
+    |-------------------|-------------------|----------------------------------|------------------------------------|
+    | warten auf        | auf (+ Akk)       | to wait for                      | Ich warte **auf den Bus**. (I am waiting for the bus.) |
+    | denken an         | an (+ Akk)        | to think about                   | Denkst du **an mich**? (Are you thinking of me?)      |
+    | sich freuen auf   | auf (+ Akk)       | to look forward to               | Ich freue mich **auf den Urlaub**. (I look forward to vacation.) |
+    | sich freuen über  | über (+ Akk)      | to be happy about                | Er freut sich **über das Geschenk**. (He is happy about the present.) |
+    | sprechen mit      | mit (+ Dat)       | to speak with/to                 | Ich spreche **mit dem Lehrer**. (I am talking to the teacher.) |
+    | sprechen über     | über (+ Akk)      | to talk about                    | Wir sprechen **über Politik**. (We talk about politics.) |
+    | teilnehmen an     | an (+ Dat)        | to take part in                  | Ich nehme **an dem Kurs** teil. (I take part in the course.) |
+    | sich interessieren für | für (+ Akk)  | to be interested in              | Ich interessiere mich **für Musik**. (I am interested in music.) |
+    | sich erinnern an  | an (+ Akk)        | to remember                      | Erinnerst du dich **an unser Treffen**? (Do you remember our meeting?) |
+    | sich kümmern um   | um (+ Akk)        | to take care of                  | Ich kümmere mich **um die Katze**. (I take care of the cat.) |
+    | bitten um         | um (+ Akk)        | to ask for, request              | Er bittet **um Hilfe**. (He asks for help.) |
+    | fragen nach       | nach (+ Dat)      | to ask about/for                 | Sie fragt **nach dem Weg**. (She asks for directions.) |
+    | gratulieren zu    | zu (+ Dat)        | to congratulate on               | Ich gratuliere dir **zum Geburtstag**. (I congratulate you on your birthday.) |
+    | abhängen von      | von (+ Dat)       | to depend on                     | Es hängt **vom Wetter** ab. (It depends on the weather.) |
+    | Angst haben vor   | vor (+ Dat)       | to be afraid of                  | Ich habe Angst **vor Spinnen**. (I'm afraid of spiders.) |
+
+    ---
+
+    ## **3. Key Tips and Typical Mistakes**
+
+    - **The preposition is NOT optional!**
+      - Always say “warten auf”, never just “warten + object.”
+    - The case (Akkusativ/Dativ) changes the article/noun!
+      - Ich warte **auf den Bus** (Akkusativ)
+      - Ich spreche **mit dem Freund** (Dativ)
+
+    **Traps:**
+    - Some verbs use a different preposition than English (e.g. “dream OF” = “träumen VON”).
+    - Sometimes the preposition in English is dropped but needed in German (“bitten UM Hilfe” = “to ask for help”).
+
+    **Tip:**  
+    Always learn and practice **verb + preposition + case** together!
+
+    ---
+
+    ## **4. More Examples in Context**
+
+    - Ich warte **auf meine Freundin**. (I am waiting for my girlfriend.)
+    - Wir sprechen **über das Wetter**. (We talk about the weather.)
+    - Denkst du **an die Prüfung**? (Are you thinking about the exam?)
+    - Ich interessiere mich **für Sprachen**. (I am interested in languages.)
+    - Er nimmt **an der Konferenz** teil. (He takes part in the conference.)
+    - Ich erinnere mich **an meinen ersten Tag**. (I remember my first day.)
+    - Wir gratulieren dir **zum Erfolg**. (We congratulate you on your success.)
+    - Sie fragt **nach dem Preis**. (She asks about the price.)
+    - Ich habe Angst **vor Hunden**. (I'm afraid of dogs.)
+
+    ---
+
+    ## **5. Practice: Common Verb-Preposition Sets**
+
+    | Verb            | Preposition + Case  | English           |
+    |-----------------|---------------------|-------------------|
+    | danken          | für (+ Akk)         | to thank for      |
+    | lachen          | über (+ Akk)        | to laugh about    |
+    | sich bewerben   | um (+ Akk)          | to apply for      |
+    | sich beschäftigen| mit (+ Dat)        | to be busy with   |
+    | reden           | mit (+ Dat) / über (+ Akk) | to talk with/about |
+    | träumen         | von (+ Dat)         | to dream of/about |
+    | zählen          | zu (+ Dat)          | to count as/among |
+    | anfangen        | mit (+ Dat)         | to begin with     |
+    | schreiben       | an (+ Akk) / über (+ Akk) | to write to/about |
+
+    ---
+
+    ## **6. How to Practice**
+
+    - Make your own example sentences!
+    - When you learn a new verb, **always check if it takes a preposition, and which case.**
+
+    ---
+
+    ## **7. More for B1: Da-compounds**
+
+    For things/ideas (not people), replace preposition+object with **da-** (darauf, daran, dafür...):  
+    - Ich warte darauf. (I'm waiting for it.)  
+    - Ich interessiere mich dafür. (I'm interested in it.)
+
+  quizzes:
+    - question: "Welche Präposition passt zu 'warten'?"
+      options: ["auf", "mit", "für"]
+      answer: "auf"
+      explanation: "'warten auf (+ Akkusativ)' = to wait for"
+      grammar_hint: |
+        **Warten + auf + Akkusativ:**  
+        Ich warte auf den Bus.
+    - question: "Was bedeutet 'sich freuen auf'?"
+      options: [
+        "to look forward to",
+        "to be happy about",
+        "to depend on"
+      ]
+      answer: "to look forward to"
+      explanation: "'sich freuen auf' = looking forward to something in the future."
+      grammar_hint: |
+        **Akkusativ für Zukunft:**  
+        Ich freue mich auf den Urlaub.
+    - question: "Was ist korrekt? 'Ich erinnere mich ___ das Konzert.'"
+      options: ["an", "auf", "über"]
+      answer: "an"
+      explanation: "'sich erinnern an' (+ Akkusativ) = to remember"
+      grammar_hint: |
+        **Merken:**  
+        sich erinnern an (+ Akkusativ)
+
+  flashcards:
+    - front: "warten ___ (to wait for)"
+      back: "auf (+ Akk) – Ich warte auf den Bus."
+    - front: "denken ___ (to think about)"
+      back: "an (+ Akk) – Denkst du an mich?"
+    - front: "sich freuen ___ (to look forward to / to be happy about)"
+      back: "auf (+ Akk) for future, über (+ Akk) for now – Ich freue mich auf das Fest / Ich freue mich über das Geschenk."
+    - front: "sprechen ___ (to speak with / about)"
+      back: "mit (+ Dat), über (+ Akk) – Ich spreche mit dir über das Wetter."
+    - front: "sich interessieren ___"
+      back: "für (+ Akk) – Ich interessiere mich für Musik."
+    - front: "teilnehmen ___"
+      back: "an (+ Dat) – Ich nehme an dem Kurs teil."
+    - front: "träumen ___"
+      back: "von (+ Dat) – Ich träume von Urlaub."
+    - front: "sich kümmern ___"
+      back: "um (+ Akk) – Ich kümmere mich um die Katze."
+    - front: "fragen ___"
+      back: "nach (+ Dat) – Ich frage nach dem Preis."
+    - front: "lachen ___"
+      back: "über (+ Akk) – Wir lachen über den Witz."
 
 
 Noun Declension:
