@@ -151,16 +151,20 @@ quiz_done = sum(
     )
 )
 if quiz_count > 0:
+    percent = int(100 * quiz_done / quiz_count) if quiz_count else 0
     st.markdown(
         f"""
         <div style='background:#f7f8fb;padding:0.6em 0 0.4em 0;margin-bottom:0.5em;border-bottom:1px solid #e6eaff;'>
-        <b>🧠 Quiz-Fortschritt:</b>
-        <progress value="{quiz_done}" max="{quiz_count}" style="width:50%;height:1em;vertical-align:middle"></progress>
-        <span style='margin-left:1em;font-size:1.1em;color:#1957ba'>{quiz_done} / {quiz_count}</span>
+            <b>🧠 Quiz-Fortschritt:</b>
+            <div style='display:inline-block;vertical-align:middle;width:54%;max-width:140px;height:1em;background:#e6eaff;border-radius:8px;overflow:hidden;margin:0 1em 0 1em;'>
+                <div style='height:100%;width:{percent}%;background:#1957ba;border-radius:8px;transition:width 0.3s;'></div>
+            </div>
+            <span style='font-size:1.08em;color:#1957ba;'>{quiz_done} / {quiz_count}</span>
         </div>
         """,
         unsafe_allow_html=True
     )
+
 
 tab_options = [
     ("📝 Erklärung", "explanation"),
