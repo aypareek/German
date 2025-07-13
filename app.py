@@ -4,12 +4,19 @@ import os
 
 st.set_page_config(page_title="Clear B1 Exam with Ayush", page_icon="🇩🇪", layout="centered")
 
-# --- Mobile/Tablet-optimized light mode only ---
+# --- Force always-light theme for ALL content & sidebar ---
 st.markdown(
     """
     <style>
     body, .stApp, .main, [data-testid="stVerticalBlock"] {
         background: #f7f8fb !important; color: #222 !important;
+    }
+    section[data-testid="stSidebar"], [data-testid="stSidebar"] {
+        background: #fafbfc !important;
+        color: #222 !important;
+    }
+    section[data-testid="stSidebar"] *, [data-testid="stSidebar"] * {
+        color: #222 !important;
     }
     .flashcard { background: #fffbe8 !important; color: #222 !important; border-radius: 14px; width:100% !important; max-width:650px; margin:auto;}
     .quiz-block { background: #e6eaff !important; color: #222 !important; border-radius: 14px; width:100% !important; max-width:650px; margin:auto;}
