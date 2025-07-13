@@ -4,13 +4,10 @@ import os
 
 st.set_page_config(page_title="Clear B1 Exam with Ayush", page_icon="🇩🇪", layout="centered")
 
-# --- Force always-light theme for ALL content & sidebar ---
+# --- Always-light, mobile/tablet-optimized style ---
 st.markdown(
     """
     <style>
-    body, .stApp, .main, [data-testid="stVerticalBlock"] {
-        background: #f7f8fb !important; color: #222 !important;
-    }
     section[data-testid="stSidebar"], [data-testid="stSidebar"] {
         background: #fafbfc !important;
         color: #222 !important;
