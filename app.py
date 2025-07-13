@@ -13,6 +13,7 @@ st.markdown(
         color: #222 !important;
     }
     section[data-testid="stSidebar"] *, [data-testid="stSidebar"] * {
+        background: #fafbfc !important;
         color: #222 !important;
     }
     .flashcard { background: #fffbe8 !important; color: #222 !important; border-radius: 14px; width:100% !important; max-width:650px; margin:auto;}
