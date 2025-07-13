@@ -104,11 +104,12 @@ with st.sidebar.expander("❓ Mini-FAQ / Hilfe", expanded=False):
 st.sidebar.markdown(
     """
     <div style='text-align:center;margin-top:2em;'>
-      <a href="https://www.paypal.com/paypalme/YOURPAYPALNAME" target="_blank"
+      <a href="https://www.paypal.com/paypalme/ayushpareek1990" target="_blank"
          style="background:#ffd700;padding:11px 24px;border-radius:24px;color:#222;font-weight:700;text-decoration:none;font-size:1.07em;box-shadow:0 1px 4px #3332;">
          ☕️ Buy me a coffee
       </a>
-      <div style="color:#aaa; font-size:0.9em; margin-top:0.4em;">Support helps keep this app free!</div>
+      <div style="color:#aaa; font-size:0.9em; margin-top:0.4em;">Support helps keep this app free!<br></div>
+
     </div>
     """, unsafe_allow_html=True
 )
@@ -155,15 +156,17 @@ if quiz_count > 0:
     st.markdown(
         f"""
         <div style='background:#f7f8fb;padding:0.6em 0 0.4em 0;margin-bottom:0.5em;border-bottom:1px solid #e6eaff;'>
-            <b>🧠 Quiz-Fortschritt:</b>
+            <span style='font-weight:bold;font-size:1.08em;color:#1957ba;vertical-align:middle;'>🧠 Quiz-Fortschritt:</span>
+            <br style="display:none;"><!-- Line break for mobile -->
             <div style='display:inline-block;vertical-align:middle;width:54%;max-width:140px;height:1em;background:#e6eaff;border-radius:8px;overflow:hidden;margin:0 1em 0 1em;'>
                 <div style='height:100%;width:{percent}%;background:#1957ba;border-radius:8px;transition:width 0.3s;'></div>
             </div>
-            <span style='font-size:1.08em;color:#1957ba;'>{quiz_done} / {quiz_count}</span>
+            <span style='font-size:1.08em;color:#1957ba;vertical-align:middle;'>{quiz_done} / {quiz_count}</span>
         </div>
         """,
         unsafe_allow_html=True
     )
+
 
 
 tab_options = [
@@ -326,7 +329,7 @@ if selected_tab == "faq":
 st.markdown(
     """
     <div style='text-align:center; margin: 2em 0 1em 0;'>
-      <a href="https://www.paypal.com/paypalme/YOURPAYPALNAME" target="_blank"
+      <a href="https://www.paypal.com/paypalme/ayushpareek1990" target="_blank"
          style="background:#ffd700;padding:13px 28px;border-radius:26px;color:#222;font-weight:700;text-decoration:none;font-size:1.19em;box-shadow:0 1px 6px #3332;">
          ☕️ Buy me a coffee on PayPal
       </a>
@@ -341,10 +344,11 @@ st.markdown(
     <hr style='margin:2rem 0'>
     <div style='text-align:center; color: #888; font-size:1em;'>
         Made with ❤️ by Ayush • Powered by Streamlit & YAML <br>
-        <a style='color:#1957ba;text-decoration:underline;margin:0 0.9em;' href='https://www.telc.net/en/candidates/language-examinations/tests/german/b1.html' target='_blank'>Official telc B1 Info</a> |
-        <a style='color:#1957ba;text-decoration:underline;margin:0 0.9em;' href='mailto:your@email.com'>Email</a> |
-        <a style='color:#1957ba;text-decoration:underline;margin:0 0.9em;' href='https://github.com/YOUR_GITHUB' target='_blank'>GitHub</a> |
-        <a style='color:#1957ba;text-decoration:underline;margin:0 0.9em;' href='https://linkedin.com/in/YOUR_LINKEDIN' target='_blank'>LinkedIn</a>
+        For the best experience, please use Google Chrome <br>
+        <a style='color:#1957ba;text-decoration:underline;margin:0 0.9em;' href='https://www.telc.net/sprachpruefungen/deutsch/zertifikat-deutsch-telc-deutsch-b1/' target='_blank'>Official telc B1 Info</a> |
+        <a style='color:#1957ba;text-decoration:underline;margin:0 0.9em;' href='mailto:ayushpareek1608@gmail.com'>Email</a> |
+        <a style='color:#1957ba;text-decoration:underline;margin:0 0.9em;' href='https://github.com/aypareek' target='_blank'>GitHub</a> |
+        <a style='color:#1957ba;text-decoration:underline;margin:0 0.9em;' href='https://www.linkedin.com/in/ayushbi/' target='_blank'>LinkedIn</a>
     </div>
     """,
     unsafe_allow_html=True
