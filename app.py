@@ -20,23 +20,6 @@ st.markdown(
     .feedback-animate { animation: fadein 0.6s; }
     @keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
     body, .stApp { font-size: 1.05em !important; font-family: 'Segoe UI', 'Arial', sans-serif !important; }
-    div[data-testid="stSidebar"] button[kind="secondary"] {
-        background: linear-gradient(90deg,#e66465,#1957ba 80%);
-        color: #fff !important;
-        font-weight: bold;
-        font-size: 1.14em;
-        padding-top: 0.7em; padding-bottom: 0.7em;
-        border-radius: 22px;
-        margin-bottom: 1.3em;
-        margin-top: 1.2em;
-        border: none;
-        transition: background 0.18s, box-shadow 0.13s;
-        box-shadow: 0 1.5px 8px #1957ba22;
-    }
-    div[data-testid="stSidebar"] button[kind="secondary"]:hover {
-        background: linear-gradient(90deg,#1957ba,#e66465 80%);
-        color: #fff !important;
-    }
     @media (max-width: 1100px) {
         .stRadio [role="radiogroup"] { flex-direction: column !important; }
         .stButton>button { font-size: 1.07em !important; }
@@ -77,13 +60,34 @@ if not st.session_state.welcomed:
 
 # ---------- Sidebar ----------
 st.sidebar.markdown('<span style="color:#1957ba;font-size:1.2em;"><b>Navigation</b></span>', unsafe_allow_html=True)
-
-# --- Reset Button ---
-if st.sidebar.button("🔄 Alles zurücksetzen", key="reset_button"):
+st.markdown(
+    """
+    <style>
+    div[data-testid="stSidebar"] button[kind="secondary"] {
+        background: linear-gradient(90deg,#e66465,#1957ba 80%);
+        color: #fff !important;
+        font-weight: bold;
+        font-size: 1.14em;
+        padding-top: 0.7em; padding-bottom: 0.7em;
+        border-radius: 22px;
+        margin-bottom: 1.3em;
+        margin-top: 1.2em;
+        border: none;
+        transition: background 0.18s, box-shadow 0.13s;
+        box-shadow: 0 1.5px 8px #1957ba22;
+    }
+    div[data-testid="stSidebar"] button[kind="secondary"]:hover {
+        background: linear-gradient(90deg,#1957ba,#e66465 80%);
+        color: #fff !important;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+if st.sidebar.button("Alles zurücksetzen/Reset", key="reset_button"):
     for k in list(st.session_state.keys()):
         del st.session_state[k]
     st.rerun()
-
 # --- Profile/Settings: Name entry + personalized greeting ---
 with st.sidebar.expander("👤 Profil / Einstellungen"):
     user_name = st.text_input("Dein Name (optional):", value=st.session_state.get("user_name", ""))
@@ -128,11 +132,12 @@ with st.sidebar.expander("❓ Mini-FAQ / Hilfe", expanded=False):
 st.sidebar.markdown(
     """
     <div style='text-align:center;margin-top:2em;'>
-      <a href="https://www.paypal.com/paypalme/YOURPAYPALNAME" target="_blank"
+      <a href="https://www.paypal.com/paypalme/ayushpareek1990" target="_blank"
          style="background:#ffd700;padding:11px 24px;border-radius:24px;color:#222;font-weight:700;text-decoration:none;font-size:1.07em;box-shadow:0 1px 4px #3332;">
          ☕️ Buy me a coffee
       </a>
-      <div style="color:#aaa; font-size:0.9em; margin-top:0.4em;">Support helps keep this app free!</div>
+      <div style="color:#aaa; font-size:0.9em; margin-top:0.4em;">Support helps keep this app free!<br></div>
+
     </div>
     """, unsafe_allow_html=True
 )
@@ -180,6 +185,7 @@ if quiz_count > 0:
         f"""
         <div style='background:#f7f8fb;padding:0.6em 0 0.4em 0;margin-bottom:0.5em;border-bottom:1px solid #e6eaff;'>
             <span style='font-weight:bold;font-size:1.08em;color:#1957ba;vertical-align:middle;'>🧠 Quiz-Fortschritt:</span>
+            <br style="display:none;"><!-- Line break for mobile -->
             <div style='display:inline-block;vertical-align:middle;width:54%;max-width:140px;height:1em;background:#e6eaff;border-radius:8px;overflow:hidden;margin:0 1em 0 1em;'>
                 <div style='height:100%;width:{percent}%;background:#1957ba;border-radius:8px;transition:width 0.3s;'></div>
             </div>
@@ -188,6 +194,8 @@ if quiz_count > 0:
         """,
         unsafe_allow_html=True
     )
+
+
 
 tab_options = [
     ("📝 Erklärung", "explanation"),
@@ -215,25 +223,6 @@ if selected_tab == "quiz":
         blockid = f"{topic}_quiz_{idx}"
         st.markdown('<div class="quiz-block">', unsafe_allow_html=True)
         st.markdown(f"**{idx+1}. {q.get('question','') }**")
-
-        # TTS button for quiz question
-        q_txt = q.get('question','').replace("'", "\\'")
-        st.markdown(
-            f"""
-            <button id="tts_quiz_{idx}" style="margin-top:6px;margin-bottom:8px;padding:0.3em 1em;background:#1857ba;color:#fff;border:none;border-radius:8px;cursor:pointer;">🔊 Play Audio</button>
-            <script>
-            var ttsq = window.parent.document.getElementById('tts_quiz_{idx}');
-            if (ttsq) {{
-                ttsq.onclick = function() {{
-                    var utter = new window.SpeechSynthesisUtterance("{q_txt}");
-                    utter.lang = 'de-DE';
-                    window.speechSynthesis.speak(utter);
-                }};
-            }}
-            </script>
-            """, unsafe_allow_html=True
-        )
-
         quiz_radio = st.radio(
             "",  # No label, just options
             q.get("options", []),
@@ -286,43 +275,18 @@ if selected_tab == "flashcards":
             st.session_state[flash_flip_key] = False
         idx = st.session_state[flash_idx_key]
         card = flashcards[idx]
-        front = str(card.get('front', '') or '').strip().replace("'", "\\'")
-        back = str(card.get('back', '') or '').strip().replace("'", "\\'")
-        # Flashcard display with TTS for both sides
+        front = str(card.get('front', '') or '').strip()
+        back = str(card.get('back', '') or '').strip()
         if front or back:
             if not st.session_state[flash_flip_key]:
                 st.markdown(
-                    f"""
-                    <div class='flashcard'><b>{front if front else '[Kein Text auf der Vorderseite]'}</b></div>
-                    <button id="tts_flash_front_{idx}" style="margin:7px 8px 7px 0;padding:0.4em 1em;background:#1857ba;color:#fff;border:none;border-radius:8px;cursor:pointer;">🔊 Play Front</button>
-                    <script>
-                    var ttsff = window.parent.document.getElementById('tts_flash_front_{idx}');
-                    if (ttsff) {{
-                        ttsff.onclick = function() {{
-                            var utter = new window.SpeechSynthesisUtterance("{front}");
-                            utter.lang = 'de-DE';
-                            window.speechSynthesis.speak(utter);
-                        }};
-                    }}
-                    </script>
-                    """, unsafe_allow_html=True
+                    f"<div class='flashcard'><b>{front if front else '[Kein Text auf der Vorderseite]'}</b></div>",
+                    unsafe_allow_html=True
                 )
             else:
                 st.markdown(
-                    f"""
-                    <div class='flashcard' style='background:#e7fff4;'><b style='color:#185a18'>{back if back else '[Kein Text auf der Rückseite]'}</b></div>
-                    <button id="tts_flash_back_{idx}" style="margin:7px 8px 7px 0;padding:0.4em 1em;background:#1857ba;color:#fff;border:none;border-radius:8px;cursor:pointer;">🔊 Play Back</button>
-                    <script>
-                    var ttsfb = window.parent.document.getElementById('tts_flash_back_{idx}');
-                    if (ttsfb) {{
-                        ttsfb.onclick = function() {{
-                            var utter = new window.SpeechSynthesisUtterance("{back}");
-                            utter.lang = 'de-DE';
-                            window.speechSynthesis.speak(utter);
-                        }};
-                    }}
-                    </script>
-                    """, unsafe_allow_html=True
+                    f"<div class='flashcard' style='background:#e7fff4;'><b style='color:#185a18'>{back if back else '[Kein Text auf der Rückseite]'}</b></div>",
+                    unsafe_allow_html=True
                 )
                 show_exp = st.toggle("💡 Erklärung anzeigen", key=f"{topic}_flash_exp_{idx}", value=False)
                 if show_exp and back:
@@ -393,7 +357,7 @@ if selected_tab == "faq":
 st.markdown(
     """
     <div style='text-align:center; margin: 2em 0 1em 0;'>
-      <a href="https://www.paypal.com/paypalme/YOURPAYPALNAME" target="_blank"
+      <a href="https://www.paypal.com/paypalme/ayushpareek1990" target="_blank"
          style="background:#ffd700;padding:13px 28px;border-radius:26px;color:#222;font-weight:700;text-decoration:none;font-size:1.19em;box-shadow:0 1px 6px #3332;">
          ☕️ Buy me a coffee on PayPal
       </a>
@@ -408,10 +372,11 @@ st.markdown(
     <hr style='margin:2rem 0'>
     <div style='text-align:center; color: #888; font-size:1em;'>
         Made with ❤️ by Ayush • Powered by Streamlit & YAML <br>
-        <a style='color:#1957ba;text-decoration:underline;margin:0 0.9em;' href='https://www.telc.net/en/candidates/language-examinations/tests/german/b1.html' target='_blank'>Official telc B1 Info</a> |
-        <a style='color:#1957ba;text-decoration:underline;margin:0 0.9em;' href='mailto:your@email.com'>Email</a> |
-        <a style='color:#1957ba;text-decoration:underline;margin:0 0.9em;' href='https://github.com/YOUR_GITHUB' target='_blank'>GitHub</a> |
-        <a style='color:#1957ba;text-decoration:underline;margin:0 0.9em;' href='https://linkedin.com/in/YOUR_LINKEDIN' target='_blank'>LinkedIn</a>
+        For the best experience, please use Google Chrome <br>
+        <a style='color:#1957ba;text-decoration:underline;margin:0 0.9em;' href='https://www.telc.net/sprachpruefungen/deutsch/zertifikat-deutsch-telc-deutsch-b1/' target='_blank'>Official telc B1 Info</a> |
+        <a style='color:#1957ba;text-decoration:underline;margin:0 0.9em;' href='mailto:ayushpareek1608@gmail.com'>Email</a> |
+        <a style='color:#1957ba;text-decoration:underline;margin:0 0.9em;' href='https://github.com/aypareek' target='_blank'>GitHub</a> |
+        <a style='color:#1957ba;text-decoration:underline;margin:0 0.9em;' href='https://www.linkedin.com/in/ayushbi/' target='_blank'>LinkedIn</a>
     </div>
     """,
     unsafe_allow_html=True
