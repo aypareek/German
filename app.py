@@ -4,18 +4,16 @@ import os
 
 st.set_page_config(page_title="Clear B1 Exam with Ayush", page_icon="🇩🇪", layout="centered")
 
+# --- Minimal sidebar style: only set background for compatibility
 st.markdown(
     """
     <style>
-    section[data-testid="stSidebar"], [data-testid="stSidebar"] {
+    section[data-testid="stSidebar"] {
         background: #fafbfc !important;
         color: #222 !important;
     }
-    section[data-testid="stSidebar"] *, [data-testid="stSidebar"] * {
-        color: #222 !important;
-    }
-    .flashcard { background: #fffbe8 !important; color: #222 !important; border-radius: 14px; width:100% !important; max-width:650px; margin:auto;}
-    .quiz-block { background: #e6eaff !important; color: #222 !important; border-radius: 14px; width:100% !important; max-width:650px; margin:auto;}
+    .flashcard { background: #fffbe8 !important; color: #222 !important; border-radius: 14px; width:100%; max-width:650px; margin:auto;}
+    .quiz-block { background: #e6eaff !important; color: #222 !important; border-radius: 14px; width:100%; max-width:650px; margin:auto;}
     .scoretag { background: #d0ffd0 !important; color: #185a18 !important; }
     .stButton>button { background: #1957ba; color: #fff; border-radius: 8px; font-size: 1.09em; }
     .stButton>button:hover { background: #174a9e;}
@@ -39,32 +37,15 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-# ---- Sidebar selectbox color fix for tablets ----
-st.markdown(
-    """
-    <style>
-    section[data-testid="stSidebar"] .stSelectbox, 
-    section[data-testid="stSidebar"] .stSelectbox * {
-        color: #222 !important;
-        background: #fafbfc !important;
-    }
-    .stSelectbox [data-testid="stSelectboxDropdown"] {
-        background: #fafbfc !important;
-        color: #222 !important;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
 
-# --- Welcome / Onboarding Banner (shows once per session) ---
+# --- Welcome Banner (shows once per session) ---
 if "welcomed" not in st.session_state:
     st.session_state.welcomed = False
 if not st.session_state.welcomed:
     st.markdown(
         """
         <div style='background:#e6eaff;border-left:6px solid #1957ba; padding:1.2em 1em; border-radius:14px; margin-bottom:1.2em; box-shadow:0 1px 4px #1957ba22'>
-        <h2 style='margin:0 0 0.3em 0;color:#1957ba !important; '>👋 Welcome to Clear B1 Exam with Ayush!</h2>
+        <h2 style='margin:0 0 0.3em 0;color:#1957ba;'>👋 Welcome to Clear B1 Exam with Ayush!</h2>
         <ul style='margin:0.5em 0 0 1.2em; font-size:1.1em;'>
           <li>Pick a topic on the left (sidebar).</li>
           <li>Try the quizzes, flip flashcards, and practice speaking.</li>
@@ -77,13 +58,9 @@ if not st.session_state.welcomed:
     )
     st.session_state.welcomed = True
 
-# ---------- Sidebar -----------
+# ---------- Sidebar ----------
 st.sidebar.markdown('<span style="color:#1957ba;font-size:1.2em;"><b>Navigation</b></span>', unsafe_allow_html=True)
-if st.sidebar.button("🔄 Alles zurücksetzen (Reset All)", help="Start again with no progress"):
-    for k in list(st.session_state.keys()):
-        del st.session_state[k]
-    st.rerun()
-st.sidebar.markdown('<span style="color:#1957ba;font-size:1.2em;"><b>Navigation</b></span>', unsafe_allow_html=True)
+# --- Profile/Settings: Name entry + personalized greeting ---
 with st.sidebar.expander("👤 Profil / Einstellungen"):
     user_name = st.text_input("Dein Name (optional):", value=st.session_state.get("user_name", ""))
     if user_name:
@@ -91,6 +68,7 @@ with st.sidebar.expander("👤 Profil / Einstellungen"):
         st.markdown(f"Hallo, **{user_name}**! 👋")
     else:
         st.session_state["user_name"] = ""
+
 # ---------- YAML LOAD ----------
 @st.cache_resource
 def load_content():
@@ -104,6 +82,7 @@ def load_content():
         st.error("YAML root should be a dictionary (mapping topics to content).")
         st.stop()
     return data
+
 content = load_content()
 topics = list(content.keys())
 
@@ -121,10 +100,11 @@ with st.sidebar.expander("❓ Mini-FAQ / Hilfe", expanded=False):
     - **Wie funktioniert die App?**  
       → Wähle ein Thema, mache das Quiz, lerne mit Flashcards.
     """)
+
 st.sidebar.markdown(
     """
     <div style='text-align:center;margin-top:2em;'>
-      <a href="https://www.paypal.com/paypalme/ayushpareek1990" target="_blank"
+      <a href="https://www.paypal.com/paypalme/YOURPAYPALNAME" target="_blank"
          style="background:#ffd700;padding:11px 24px;border-radius:24px;color:#222;font-weight:700;text-decoration:none;font-size:1.07em;box-shadow:0 1px 4px #3332;">
          ☕️ Buy me a coffee
       </a>
@@ -132,6 +112,7 @@ st.sidebar.markdown(
     </div>
     """, unsafe_allow_html=True
 )
+
 if "progress" not in st.session_state:
     st.session_state.progress = {t: {"quizzes": 0, "flashcards": 0} for t in topics}
 all_quizzes = sum(len(content[t].get("quizzes", [])) for t in topics)
@@ -141,6 +122,7 @@ total_done = sum(
         if st.session_state.get(f"{t}_quiz_{idx}_checked", False)
     ) for t in topics
 )
+
 compact_mode = st.sidebar.checkbox("🗜️ Kompakt-Modus", value=False)
 if compact_mode:
     st.markdown(
@@ -151,12 +133,15 @@ if compact_mode:
         </style>
         """, unsafe_allow_html=True
     )
+
 if st.session_state.get("user_name"):
     st.markdown(
         f"<div style='text-align:center; margin-bottom:0.7em;font-size:1.15em;color:#1957ba;'>Welcome, <b>{st.session_state['user_name']}</b>!</div>",
         unsafe_allow_html=True
     )
+
 data = content[topic]
+
 quiz_count = len(data.get("quizzes", []))
 quiz_done = sum(
     1 for idx in range(quiz_count)
@@ -168,7 +153,7 @@ quiz_done = sum(
 if quiz_count > 0:
     st.markdown(
         f"""
-        <div style='position:sticky;top:0;z-index:999;background:#f7f8fb;padding:0.6em 0 0.4em 0;margin-bottom:0.5em;border-bottom:1px solid #e6eaff;'>
+        <div style='background:#f7f8fb;padding:0.6em 0 0.4em 0;margin-bottom:0.5em;border-bottom:1px solid #e6eaff;'>
         <b>🧠 Quiz-Fortschritt:</b>
         <progress value="{quiz_done}" max="{quiz_count}" style="width:50%;height:1em;vertical-align:middle"></progress>
         <span style='margin-left:1em;font-size:1.1em;color:#1957ba'>{quiz_done} / {quiz_count}</span>
@@ -235,7 +220,6 @@ if selected_tab == "quiz":
         + "</div>",
         unsafe_allow_html=True
     )
-    # ALL-CORRECT BALLOONS CELEBRATION
     if quizzes and num_correct == len(quizzes) and len(quizzes) > 0:
         st.balloons()
         st.markdown(
@@ -337,33 +321,8 @@ if selected_tab == "faq":
 
 st.markdown(
     """
-    <style>
-    #scrollTopBtn {
-        display: none; position:fixed; bottom:32px; right:18px; z-index:1000; background:#1957ba;
-        color:white; border:none; border-radius:32px; padding:16px 18px; font-size:1.4em; cursor:pointer;
-        box-shadow: 0 2px 12px #3333;
-        transition:background 0.2s;
-    }
-    #scrollTopBtn:hover { background:#174a9e; }
-    </style>
-    <button id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'});">⬆️</button>
-    <script>
-    var btn = document.getElementById('scrollTopBtn');
-    window.onscroll = function() {
-      if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
-        btn.style.display = "block";
-      } else {
-        btn.style.display = "none";
-      }
-    }
-    </script>
-    """,
-    unsafe_allow_html=True
-)
-st.markdown(
-    """
     <div style='text-align:center; margin: 2em 0 1em 0;'>
-      <a href="https://www.paypal.com/paypalme/ayushpareek1990" target="_blank"
+      <a href="https://www.paypal.com/paypalme/YOURPAYPALNAME" target="_blank"
          style="background:#ffd700;padding:13px 28px;border-radius:26px;color:#222;font-weight:700;text-decoration:none;font-size:1.19em;box-shadow:0 1px 6px #3332;">
          ☕️ Buy me a coffee on PayPal
       </a>
@@ -378,11 +337,10 @@ st.markdown(
     <hr style='margin:2rem 0'>
     <div style='text-align:center; color: #888; font-size:1em;'>
         Made with ❤️ by Ayush • Powered by Streamlit & YAML <br>
-        For the best experience, please use Google Chrome <br>
-        <a style='color:#1957ba;text-decoration:underline;margin:0 0.9em;' href='https://www.telc.net/sprachpruefungen/deutsch/zertifikat-deutsch-telc-deutsch-b1/' target='_blank'>Official telc B1 Info</a> |
-        <a style='color:#1957ba;text-decoration:underline;margin:0 0.9em;' href='mailto:ayushpareek1608@gmail.com'>Email</a> |
-        <a style='color:#1957ba;text-decoration:underline;margin:0 0.9em;' href='https://github.com/aypareek' target='_blank'>GitHub</a> |
-        <a style='color:#1957ba;text-decoration:underline;margin:0 0.9em;' href='https://www.linkedin.com/in/ayushbi/' target='_blank'>LinkedIn</a>
+        <a style='color:#1957ba;text-decoration:underline;margin:0 0.9em;' href='https://www.telc.net/en/candidates/language-examinations/tests/german/b1.html' target='_blank'>Official telc B1 Info</a> |
+        <a style='color:#1957ba;text-decoration:underline;margin:0 0.9em;' href='mailto:your@email.com'>Email</a> |
+        <a style='color:#1957ba;text-decoration:underline;margin:0 0.9em;' href='https://github.com/YOUR_GITHUB' target='_blank'>GitHub</a> |
+        <a style='color:#1957ba;text-decoration:underline;margin:0 0.9em;' href='https://linkedin.com/in/YOUR_LINKEDIN' target='_blank'>LinkedIn</a>
     </div>
     """,
     unsafe_allow_html=True
