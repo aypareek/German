@@ -79,6 +79,11 @@ if not st.session_state.welcomed:
 
 # ---------- Sidebar -----------
 st.sidebar.markdown('<span style="color:#1957ba;font-size:1.2em;"><b>Navigation</b></span>', unsafe_allow_html=True)
+if st.sidebar.button("🔄 Alles zurücksetzen (Reset All)", help="Start again with no progress"):
+    for k in list(st.session_state.keys()):
+        del st.session_state[k]
+    st.rerun()
+st.sidebar.markdown('<span style="color:#1957ba;font-size:1.2em;"><b>Navigation</b></span>', unsafe_allow_html=True)
 with st.sidebar.expander("👤 Profil / Einstellungen"):
     user_name = st.text_input("Dein Name (optional):", value=st.session_state.get("user_name", ""))
     if user_name:
@@ -155,7 +160,10 @@ data = content[topic]
 quiz_count = len(data.get("quizzes", []))
 quiz_done = sum(
     1 for idx in range(quiz_count)
-    if st.session_state.get(f"{topic}_quiz_{idx}_checked", False)
+    if (
+        st.session_state.get(f"{topic}_quiz_{idx}_checked", False)
+        or st.session_state.get(f"{topic}_quiz_{idx}", None) is not None
+    )
 )
 if quiz_count > 0:
     st.markdown(
