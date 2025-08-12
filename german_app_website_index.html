@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Clear B1 Exam with Ayush</title>
+  <meta name="description" content="Quizzes, flashcards, FAQ & speaking practice for German B1." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🇩🇪</text></svg>">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .card { border-radius: 14px; box-shadow: 0 2px 10px rgba(0,0,0,.06);} 
+    .flash { background:#fffbe8; }
+    .quiz  { background:#e6eaff; }
+  </style>
+  <!-- React / ReactDOM / React Router -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-router-dom@6/umd/react-router-dom.development.js"></script>
+  <!-- js-yaml to parse your existing YAML file -->
+  <script src="https://unpkg.com/js-yaml@4/dist/js-yaml.min.js"></script>
+</head>
+<body class="bg-slate-50 text-slate-900">
+  <div id="root"></div>
+
+  <script type="text/javascript">
+  const { useState, useEffect, useMemo } = React;
+  const { HashRouter, Routes, Route, Link, useNavigate, useParams } = ReactRouterDOM;
+
+  // --- Helpers -------------------------------------------------------------
+  async function loadYaml(url) {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`Failed to load ${url}: ${res.status}`);
+    const text = await res.text();
+    return jsyaml.load(text);
+  }
+
+  // --- Quick-win helpers: analytics, SEO meta, localStorage --------------
+  function track(event, data = {}) {
+    // If Plausible is later added, this will forward events automatically
+    if (window.plausible) { window.plausible(event, { props: data }); }
+    else { console.debug(`[analytics] ${event}`, data); }
+  }
+
+  function setMeta(title, description) {
+    if (title) document.title = title;
+    if (description) {
+      let m = document.querySelector('meta[name="description"]');
+      if (!m) {
+        m = document.createElement('meta');
+        m.name = 'description';
+        document.head.appendChild(m);
+      }
+      m.setAttribute('content', description);
+    }
+  }
+
+  const storage = {
+    get(key, fallback) {
+      try { const v = localStorage.getItem(key); return v !== null ? JSON.parse(v) : fallback; } catch { return fallback; }
+    },
+    set(key, value) { try { localStorage.setItem(key, JSON.stringify(value)); } catch(e) { console.warn('localStorage failed', e);} }
+  };
+
+  function Spinner() {
+    return (
+      <div className="flex items-center justify-center py-20">
+        <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-slate-900"></div>
+      </div>
+    );
+  }
+
+  function Layout({ children }) {
+    return (
+      <div className="min-h-screen">
+        <header className="bg-indigo-600 text-white">
+          <nav className="mx-auto max-w-5xl px-4 py-4 flex items-center gap-4">
+            <Link to="/" className="font-bold tracking-tight">Clear B1 Exam with Ayush</Link>
+            <div className="ml-auto flex gap-4 text-sm">
+              <Link to="/topics" className="hover:underline">Topics</Link>
+              <Link to="/speaking" className="hover:underline">Speaking</Link>
+              <Link to="/faq" className="hover:underline">FAQ</Link>
+            </div>
+          </nav>
+        </header>
+        <main className="mx-auto max-w-5xl px-4 py-8">{children}</main>
+        <footer className="mx-auto max-w-5xl px-4 pb-10 text-center text-sm text-slate-500">
+          <hr className="my-6"/>
+          <p>Made with ❤️ by Ayush • Powered by YAML</p>
+          <p>
+            <a className="underline mx-2" target="_blank" href="https://www.telc.net/sprachpruefungen/deutsch/zertifikat-deutsch-telc-deutsch-b1/">Official telc B1 Info</a>
+            <a className="underline mx-2" href="mailto:ayushpareek1608@gmail.com">Email</a>
+            <a className="underline mx-2" target="_blank" href="https://github.com/aypareek">GitHub</a>
+            <a className="underline mx-2" target="_blank" href="https://www.linkedin.com/in/ayushbi/">LinkedIn</a>
+          </p>
+        </footer>
+      </div>
+    );
+  }
+
+  // --- Home ---------------------------------------------------------------
+  function Home() {
+    const [dismissed, setDismissed] = useState(false);
+    useEffect(() => {
+      setMeta('Clear B1 Exam with Ayush', 'Quizzes, flashcards, FAQ & speaking practice for German B1.');
+      track('pageview', { page: 'home' });
+    }, []);
+    return (
+      <div>
+        {!dismissed && (
+          <div className="bg-indigo-50 border-l-4 border-indigo-600 p-4 rounded-lg shadow-sm mb-6">
+            <h2 className="text-indigo-700 font-semibold text-lg">👋 Welcome to Clear B1 Exam with Ayush!</h2>
+            <ul className="list-disc list-inside mt-1">
+              <li>Pick a topic under Topics.</li>
+              <li>Try the quizzes, flip flashcards, and practice speaking.</li>
+              <li>Open FAQ for tips & help at any time.</li>
+            </ul>
+            <button className="mt-3 text-sm underline" onClick={() => setDismissed(true)}>Dismiss</button>
+          </div>
+        )}
+        <section className="grid md:grid-cols-2 gap-6">
+          <div className="card quiz p-5">
+            <h3 className="font-semibold text-lg">Quizzes</h3>
+            <p className="text-sm text-slate-600">Multiple-choice checks for each topic.</p>
+          </div>
+          <div className="card flash p-5">
+            <h3 className="font-semibold text-lg">Flashcards</h3>
+            <p className="text-sm text-slate-600">Flip cards with examples & explanations.</p>
+          </div>
+          <div className="card p-5">
+            <h3 className="font-semibold text-lg">Speaking</h3>
+            <p className="text-sm text-slate-600">Upload an audio answer and listen back.</p>
+          </div>
+          <div className="card p-5">
+            <h3 className="font-semibold text-lg">FAQ</h3>
+            <p className="text-sm text-slate-600">Common questions about German grammar & app usage.</p>
+          </div>
+        </section>
+      </div>
+    );
+  }
+
+  // --- Topics listing -----------------------------------------------------
+  function Topics({ data }) {
+    const navigate = useNavigate();
+    const topics = useMemo(() => Object.keys(data || {}), [data]);
+    useEffect(() => {
+      setMeta('Topics — Clear B1', 'Browse grammar topics with flashcards and quizzes.');
+      track('pageview', { page: 'topics' });
+    }, []);
+    return (
+      <div>
+        <div className="flex items-center gap-3 mb-6">
+          <h1 className="text-2xl font-semibold">Topics</h1>
+          <select className="ml-auto border rounded px-3 py-2" onChange={(e)=> e.target.value && navigate(`/topics/${encodeURIComponent(e.target.value)}`)}>
+            <option value="">Choose a topic…</option>
+            {topics.map(t => <option key={t} value={t}>{t}</option>)}
+          </select>
+        </div>
+        <ul className="grid md:grid-cols-2 gap-4">
+          {topics.map(t => (
+            <li key={t} className="card p-4 flex items-center justify-between">
+              <div>
+                <h3 className="font-semibold">{t}</h3>
+                <p className="text-sm text-slate-600">Flashcards & quizzes</p>
+              </div>
+              <Link className="underline" to={`/topics/${encodeURIComponent(t)}`}>Open</Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  }
+
+  // --- Topic detail (flashcards + quizzes) --------------------------------
+  function TopicDetail({ data }) {
+    const { slug } = useParams();
+    const topicKey = decodeURIComponent(slug || "");
+    const item = data?.[topicKey] || {};
+    const flashcards = Array.isArray(item.flashcards) ? item.flashcards : [];
+    const quizzes = Array.isArray(item.quizzes) ? item.quizzes : [];
+
+    const savedIdxKey = `fc_idx_${topicKey}`;
+    const [idx, setIdx] = useState(() => Math.min(storage.get(savedIdxKey, 0), Math.max(0, flashcards.length-1)));
+    const [showBack, setShowBack] = useState(false);
+
+    useEffect(() => { storage.set(savedIdxKey, idx); }, [idx]);
+
+    useEffect(() => {
+      const desc = flashcards?.[0]?.front ? `${topicKey}: ${String(flashcards[0].front).slice(0, 120)}` : `${topicKey} — flashcards & quizzes`;
+      setMeta(`${topicKey} — Clear B1`, desc);
+      track('pageview', { page: 'topic', topic: topicKey });
+    }, [topicKey, flashcards?.length]);
+
+    const card = flashcards[idx] || {};
+    const front = (card.front || '').toString().trim();
+    const back  = (card.back  || '').toString().trim();
+
+    return (
+      <div className="space-y-6">
+        <div className="flex items-center gap-3">
+          <h1 className="text-2xl font-semibold">{topicKey}</h1>
+          <Link className="ml-auto underline" to="/topics">All topics</Link>
+        </div>
+
+        <section className="space-y-3">
+          <h2 className="font-semibold">Flashcards</h2>
+          {flashcards.length ? (
+            <div className="card flash p-5">
+              <div className="text-lg font-semibold">{showBack ? (back || '[Kein Text auf der Rückseite]') : (front || '[Kein Text auf der Vorderseite]')}</div>
+              {showBack && back && (
+                <details className="mt-2 text-sm"><summary className="cursor-pointer">💡 Erklärung anzeigen</summary><div className="mt-2">{back}</div></details>
+              )}
+              <div className="mt-4 flex items-center gap-2">
+                <button className="px-3 py-2 rounded bg-slate-900 text-white" onClick={()=>{ setIdx((idx - 1 + flashcards.length)%flashcards.length); setShowBack(false); }}>&larr;</button>
+                {!showBack ? (
+                  <button className="px-3 py-2 rounded bg-indigo-600 text-white" onClick={()=> setShowBack(true)}>Antwort zeigen</button>
+                ) : (
+                  <button className="px-3 py-2 rounded bg-indigo-600 text-white" onClick={()=>{ setIdx((idx + 1)%flashcards.length); setShowBack(false); }}>Nächste Karte</button>
+                )}
+                <div className="ml-auto text-sm">Karte <b>{flashcards.length ? idx+1 : 0}</b> von {flashcards.length}</div>
+              </div>
+            </div>
+          ) : (
+            <p className="text-slate-600">Für dieses Thema gibt es keine Flashcards.</p>
+          )}
+        </section>
+
+        <section className="space-y-3">
+          <h2 className="font-semibold">Quizzes</h2>
+          {quizzes.length ? quizzes.map((q, i) => <QuizBlock key={i} q={q} />) : (
+            <p className="text-slate-600">Für dieses Thema gibt es keine Quizfragen.</p>
+          )}
+        </section>
+      </div>
+    );
+  }
+
+  function QuizBlock({ q }) {
+    const [selected, setSelected] = useState('');
+    const [checked, setChecked] = useState(false);
+    const correct = q.correct; // expects letter like 'a' | 'b' | 'c'
+    const qKey = `quiz_${encodeURIComponent(q.question || '')}`;
+
+    useEffect(() => {
+      const saved = storage.get(qKey, null);
+      if (saved) { setSelected(saved.selected || ''); setChecked(!!saved.checked); }
+    }, []);
+
+    useEffect(() => {
+      storage.set(qKey, { selected, checked });
+    }, [selected, checked]);
+
+    const isCorrect = checked && selected === correct;
+    return (
+      <div className="card quiz p-5 space-y-2">
+        <div className="font-medium">{q.question}</div>
+        <div className="grid gap-2 md:grid-cols-3">
+          {['a','b','c'].map(k => (
+            q.options?.[k] ? (
+              <label key={k} className={`flex items-center gap-2 p-2 rounded border ${checked ? (k===correct ? 'border-green-600' : (selected===k ? 'border-red-600' : 'border-slate-200')) : 'border-slate-200'}`}>
+                <input type="radio" name={`q_${q.question}`} value={k} onChange={(e)=> setSelected(e.target.value)} />
+                <span>{q.options[k]}</span>
+              </label>
+            ) : null
+          ))}
+        </div>
+        {!checked ? (
+          <button className="px-3 py-2 rounded bg-slate-900 text-white" onClick={()=> setChecked(true)}>Check</button>
+        ) : (
+          <div className={`px-3 py-2 rounded text-sm ${isCorrect ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
+            {isCorrect ? 'Richtig!' : `Falsch. Richtige Antwort: ${correct.toUpperCase()}`}
+          </div>
+        )}
+      </div>
+    );
+  }
+
+  // --- Speaking (client-side only like Streamlit upload+playback) ---------
+  function Speaking() {
+    const [file, setFile] = useState(null);
+    const [url, setUrl] = useState('');
+    const [recState, setRecState] = useState('idle'); // idle | recording | ready
+    const [recUrl, setRecUrl] = useState('');
+    const mediaRef = React.useRef({ stream: null, chunks: [], recorder: null });
+
+    useEffect(() => {
+      setMeta('Speaking — Clear B1', 'Record or upload your answer and listen back.');
+      track('pageview', { page: 'speaking' });
+    }, []);
+
+    useEffect(() => {
+      if (file) {
+        const objectUrl = URL.createObjectURL(file);
+        setUrl(objectUrl);
+        return () => URL.revokeObjectURL(objectUrl);
+      }
+    }, [file]);
+
+    async function startRec() {
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        const recorder = new MediaRecorder(stream);
+        mediaRef.current = { stream, recorder, chunks: [] };
+        recorder.ondataavailable = (e) => { if (e.data.size) mediaRef.current.chunks.push(e.data); };
+        recorder.onstop = () => {
+          const blob = new Blob(mediaRef.current.chunks, { type: 'audio/webm' });
+          const u = URL.createObjectURL(blob);
+          setRecUrl(u);
+          setRecState('ready');
+          track('audio_recorded', { bytes: blob.size });
+        };
+        recorder.start();
+        setRecState('recording');
+        track('audio_record_start');
+      } catch (e) {
+        alert('Mic permission denied or not available.');
+        console.error(e);
+      }
+    }
+
+    function stopRec() {
+      const { recorder, stream } = mediaRef.current;
+      if (recorder && recorder.state !== 'inactive') recorder.stop();
+      if (stream) stream.getTracks().forEach(t => t.stop());
+    }
+
+    function downloadRec() {
+      if (!recUrl) return;
+      const a = document.createElement('a');
+      a.href = recUrl; a.download = 'speaking-answer.webm'; a.click();
+    }
+
+    return () => URL.revokeObjectURL(objectUrl);
+      }
+    }, [file]);
+    return (
+      <div>
+        <h1 className="text-2xl font-semibold mb-4">🎤 Sprechen</h1>
+        <p className="mb-3">Lade eine Aufnahme deiner Antwort hoch (mp3/wav) und höre sie dir an.</p>
+        <input type="file" accept="audio/mp3,audio/wav" onChange={(e)=> setFile(e.target.files?.[0] || null)} />
+        {url ? (
+          <div className="mt-4">
+            <audio controls src={url}></audio>
+            <p className="text-green-700 mt-2">Deine Antwort wurde hochgeladen und kann angehört werden.</p>
+          </div>
+        ) : (
+          <p className="text-slate-600 mt-2">Nimm deine Antwort auf deinem Handy oder PC auf, und lade die Datei hier hoch!</p>
+        )}
+      </div>
+    );
+  }
+
+  // --- FAQ ---------------------------------------------------------------
+  function FAQ() {
+    useEffect(() => {
+      setMeta('FAQ — Clear B1', 'Common questions about German grammar & how the site works.');
+      track('pageview', { page: 'faq' });
+    }, []);
+    return (
+      <div>
+        <h1 className="text-2xl font-semibold mb-4">❓ FAQ</h1>
+        <ul className="space-y-2 text-sm">
+          <li><b>Was bedeutet 'nicht'?</b> → Negation, e.g. "Ich komme nicht." = "I'm not coming."</li>
+          <li><b>Was ist der Unterschied zwischen 'kein' und 'nicht'?</b> → 'kein' negates nouns: "Ich habe kein Geld." • 'nicht' negates verbs/adjectives: "Ich arbeite nicht."</li>
+          <li><b>Wie bilde ich Fragen?</b> → Verb first: "Gehst du ins Kino?"</li>
+          <li><b>Wie funktioniert die Website?</b> → Wähle ein Thema, mache das Quiz, lerne mit Flashcards.</li>
+        </ul>
+      </div>
+    );
+  }
+
+  // --- App root: load YAML once and provide to routes ---------------------
+  function App() {
+    const [data, setData] = useState(null);
+    const [error, setError] = useState('');
+
+    useEffect(() => {
+      loadYaml('grammar_content.yaml')
+        .then(setData)
+        .catch(err => setError(err.message));
+    }, []);
+
+    if (error) return <div className="text-red-700">Error loading content: {error}</div>;
+    if (!data) return <Spinner/>;
+
+    return (
+      <HashRouter>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home/>} />
+            <Route path="/topics" element={<Topics data={data}/>} />
+            <Route path="/topics/:slug" element={<TopicDetail data={data}/>} />
+            <Route path="/speaking" element={<Speaking/>} />
+            <Route path="/faq" element={<FAQ/>} />
+          </Routes>
+        </Layout>
+      </HashRouter>
+    );
+  }
+
+  ReactDOM.createRoot(document.getElementById('root')).render(React.createElement(App));
+  </script>
+</body>
+</html>
